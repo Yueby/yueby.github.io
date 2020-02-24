@@ -1,46 +1,37 @@
 <!DOCTYPE html>
 <html lang="zh">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>小网站</title>
-        <style>
-            @font-face {
-                font-family: benmo;
-                src: url("font/本墨剪字.woff2") format("woff2"),
-                    url("font/本墨剪字.woff") format("woff"),
-                    url("font/本墨剪字.ttf") format("truetype"),
-                    url("font/本墨剪字.eot") format("embedded-opentype"),
-                    url("font/本墨剪字.svg") format("svg");
-                font-weight: normal;
-                font-style: normal;
-            }
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小网站</title>
+    <link rel="stylesheet" href="bodyfont.css" />
+    <style>
+        body {
+            font-size: 40px;
+        }
+        
+        h3,
+        h4 {
+            text-align: center;
+            color: rgb(240, 160, 173);
+        }
+    </style>
+</head>
 
-            body {
-                font-family: benmo;
-                font-size: 40px;
-            }
+<body>
+    <h3>欢迎来到这个<q>简陋</q>的网站</h3>
+    <hr>
+    <br>
+    <div style="text-align: center;">
+        <a href="no-in.html" style="width: 200px;color: turquoise;font-size: 30px;">不要点这里哦~</a>
+    </div>
 
-            h3,
-            h4 {
-                text-align: center;
-                color: rgb(240, 160, 173);
-            }
-        </style>
-    </head>
-
-    <body>
-        <h3>欢迎来到这个<q>简陋</q>的网站</h3>
-        <hr>
-        <a href="cssTest.html" style="text-align: center;color: turquoise;">
-            <h6>不要点这里哦~</h6>
-        </a>
-        <br />
-        <div style="text-align: center;height: 220px;">
-            <img src="image/艾莉.gif" width="200" />
-        </div>
-        <div style="text-align: center; color:rgb(240, 160, 173);">摆腿腿</div>
-    </body>
+    <br />
+    <div style="text-align: center;height: 220px;">
+        <img src="image/艾莉.gif" width="200" />
+    </div>
+    <div style="text-align: center; color:rgb(240, 160, 173);">摆腿腿</div>
+</body>
 
 </html>
