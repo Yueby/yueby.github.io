@@ -1,0 +1,193 @@
+@font-face {
+    font-family: benmo;
+    src: url("../font/本墨剪字.woff2") format("woff2"),
+    url("../font/本墨剪字.woff") format("woff"),
+    url("../font/本墨剪字.ttf") format("truetype"),
+    url("../font/本墨剪字.eot") format("embedded-opentype"),
+    url("../font/本墨剪字.svg") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    text-align: center;
+    font-family: benmo, 'Microsoft YaHei UI', serif;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-image: url("../images/background-1.jpg");
+    background-size: 1920px;
+    background-attachment: fixed;
+}
+
+div {
+    display: block;
+}
+
+div#wrapper {
+    margin: -30px auto;
+    padding: 0;
+    width: 1500px;
+    height: 1920px;
+    background-color: rgba(232, 232, 232, 0.37);
+}
+
+div#header {
+    margin: 0 auto;
+    height: 100px;
+    width: 1474px;
+    /*border: 1px solid #000000;*/
+    /*background: rgba(201, 194, 205, 0.35);*/
+}
+
+/*标题*/
+div#header h1 {
+
+    padding: 40px 0 0 0;
+    font-size: 50px;
+    text-align: left;
+    /*border: 1px solid #000000;*/
+}
+
+/*个性文字*/
+div#header sub {
+    font-size: 20px;
+    color: #eaebff;
+    margin: 20px;
+}
+
+/*上部导航栏*/
+div#navfirst {
+    height: 43px;
+    width: 1474px;
+    margin: 50px 0 0 10px;
+    padding: 0;
+    background: rgba(201, 194, 205, 0.35);
+    border: 1px solid rgba(176, 163, 180, 0.48);
+}
+
+div#navfirst ul#menu {
+    height: 43px;
+    width: 1474px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: rgba(201, 194, 205, 0.35);
+}
+
+div#navfirst ul#menu li {
+    margin: 0 0 0 12px;
+    padding: 10px;
+    list-style: none;
+    position: absolute;
+    font-size: 20px;
+}
+
+div#leftnav {
+    float: left;
+    height: 1350px;
+    width: 300px;
+    margin: 30px 0 0 10px;
+    padding: 0;
+    background: rgba(201, 194, 205, 0.35);
+    border: 1px solid rgba(176, 163, 180, 0.48);
+}
+
+div#center {
+    float: right;
+    height: 1350px;
+    width: 1140px;
+    margin: 30px 14px 0 30px;
+    padding: 0;
+    background: rgba(201, 194, 205, 0.35);
+    border: 1px solid rgba(176, 163, 180, 0.48);
+}
+
+div#bottom {
+    float: bottom;
+    height: 300px;
+    width: 1474px;
+    margin: 1400px 0 0 10px;
+    padding: 0;
+    background: rgba(201, 194, 205, 0.35);
+    border: 1px solid rgba(176, 163, 180, 0.48);
+}
+
+/*链接未访问时与已访问*/
+a.title:link, a.title:visited {
+    float: left;
+    display: block;
+    color: #e3d1ff;
+    text-decoration: none;
+    width: 320px;
+    height: 50px;
+}
+
+/*链接鼠标悬浮与正在点击*/
+a.title:hover, a.title:active {
+    color: #d59eff;
+    border-bottom: 7px solid #d59eff;
+}
+
+a.menunav:link, a.menunav:visited {
+    background: rgba(201, 194, 205, 0.35);
+}
+
+a.menunav:hover, a.menunav:active {
+    background: rgba(152, 150, 255, 0.47);
+}
+
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    padding-inline-start: 40px;
+}
+
+ul#menu li, ul#menu a {
+    text-decoration: none;
+    margin: -7px;
+    padding: 6px;
+    display: block;
+    height: 26px;
+    width: 200px;
+    color: rgba(166, 100, 255, 0.5);
+
+}
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+#one {
+    width: 200px;
+    left: 380px;
+}
+
+#two {
+    width: 200px;
+    left: 600px;
+}
+
+#three {
+    width: 200px;
+    left: 820px;
+}
+
+#four {
+    width: 200px;
+    left: 1040px;
+}
+
+#five {
+    width: 200px;
+    left: 1260px;
+}
+
+
+
+
