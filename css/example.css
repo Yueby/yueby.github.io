@@ -1,0 +1,93 @@
+.example {
+    color: blue;
+}
+
+p.date {
+    text-align: right;
+}
+
+p.main {
+    text-align: justify;
+}
+
+p.uppercase {
+    text-transform: uppercase;
+}
+
+p.lowercase {
+    text-transform: lowercase;
+}
+
+p.capitalize {
+    text-transform: capitalize;
+}
+
+p.serif {
+    font-family: "Times New Roman", Times, serif;
+}
+
+p.sansserif {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p.normal {
+    font-style: normal;
+}
+
+p.italic {
+    font-style: italic;
+}
+
+p.oblique {
+    font-style: oblique;
+}
+
+a.example-link1:link {
+    color: #000000;
+    text-decoration: underline;
+}
+
+a.example-link:visited {
+    color: #00FF00;
+}
+
+a.example-link1:hover {
+    color: #FF00FF;
+}
+
+a.example-link1:active {
+    color: #0000FF;
+}
+
+a.example-link2:link {
+    text-decoration: none;
+}
+
+a.example-link2:visited {
+    text-decoration: none;
+}
+
+a.example-link2:hover {
+    text-decoration: underline;
+}
+
+a.example-link2:active {
+    text-decoration: underline;
+}
+
+a.example-link3:link {
+    background-color: #B2FF99;
+    text-decoration: underline;
+}
+
+a.example-link3:visited {
+    background-color: #FFFF85;
+}
+
+a.example-link3:hover {
+    background-color: #FF704D;
+}
+
+a.example-link3:active {
+    background-color: #FF704D;
+}

@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+    <link rel="icon" type="image/x-ico" href="../../image/icon.png">
+    <link rel="stylesheet" href="../../css/main.css">
+</head>
+
+<body>
+<div class="header">
+    <h1><a href="../../index.html">HTML</a></h1>
+</div>
+
+<input type="checkbox" id="trigger">
+
+<label for="trigger">
+    <div class="hamburger-container">
+        <span></span>
+        <span></span>
+    </div>
+</label>
+
+<div class="containerBox">
+    <div class="leftNav">
+        <ul>
+            <li><a href="html_basic.html">HTML基本结构</a></li>
+            <li><a href="html_meta.html">&lt;meta&gt;标签</a></li>
+            <li><a href="html_background.html">页面背景</a></li>
+            <li><a href="html_text.html">文本相关</a></li>
+            <li><a href="html_textlayout.html">文字布局</a></li>
+            <li><a href="html_image.html">图像</a></li>
+            <li><a href="html_link.html">链接</a></li>
+            <li><a href="html_marquee.html">滚动标签</a></li>
+            <li><a href="html_table.html"
+                   style="background-color: #20A3FB;color: white;border: 1px solid white;">表格</a></li>
+            <li><a href="html_form.html">表单</a></li>
+            <li><a href="html_frameset.html">框架</a></li>
+        </ul>
+
+    </div>
+
+    <div class="rightWrapper">
+        <!--表格-->
+        <div class=" containerCard">
+            <h1>表格</h1>
+            <table class="table">
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Points</th>
+                </tr>
+                <tr>
+                    <td>Jill</td>
+                    <td>Smith</td>
+                    <td>50</td>
+                </tr>
+                <tr>
+                    <td>Eve</td>
+                    <td>Jackson</td>
+                    <td>94</td>
+                </tr>
+                <tr>
+                    <td>John</td>
+                    <td>Doe</td>
+                    <td>80</td>
+                </tr>
+                <tr>
+                    <td>Adam</td>
+                    <td>Johnson</td>
+                    <td>67</td>
+                </tr>
+            </table>
+            <p class="pEffect">示例：</p>
+            <div class="textarea">
+                &lt;table border="1"&gt;<br>
+                &emsp;&lt;tr&gt;<br>
+                &emsp;&emsp;&lt;td&gt;row 1, cell 1 &lt;/td&gt;<br>
+                &emsp;&emsp;&lt;td&gt;row 1, cell 2 &lt;/td&gt;<br>
+                &emsp;&lt;/tr&gt;<br>
+                &emsp;&lt;tr&gt;<br>
+                &emsp;&emsp;&lt;td&gt;row 2, cell 1 &lt;/td&gt;<br>
+                &emsp;&emsp;&lt;td&gt;row 2, cell 2 &lt;/td&gt;<br>
+                &emsp;&lt;/tr&gt;<br>
+                &lt;/table&gt;
+            </div>
+            <p class="pEffect">效果：</p>
+            <div class="showarea">
+                <table border="1">
+                    <tr>
+                        <td>row 1, cell 1</td>
+                        <td>row 1, cell 2</td>
+                    </tr>
+                    <tr>
+                        <td>row 2, cell 1</td>
+                        <td>row 2, cell 2</td>
+                    </tr>
+                </table>
+            </div>
+
+            <h2>表格和边框属性</h2>
+            <h3>border属性</h3>
+            <p>如果不定义边框属性，表格将不显示边框。有时这很有用，但是大多数时候，我们希望显示边框。</p>
+            <p>使用边框属性来显示一个带有边框的表格：</p>
+            <p class="pEffect">示例：</p>
+            <div class="textarea">
+                &lt;table border="1"&gt;<br>
+                &emsp;&lt;tr&gt;<br>
+                &emsp;&emsp;&lt;td>Row 1, cell 1&lt;/td&gt;<br>
+                &emsp;&emsp;&lt;td>Row 1, cell 2&lt;/td&gt;<br>
+                &emsp;&lt;/tr&gt;<br>
+                &lt;table&gt;
+            </div>
+            <p class="pEffect">效果：</p>
+            <div class="showarea">
+                <table border="1">
+                    <tr>
+                        <td>Row 1, cell 1</td>
+                        <td>Row 1, cell 2</td>
+                    </tr>
+                </table>
+            </div>
+            <p>想要取消表格边框只需要将 border 属性的值改为 0 就可以了。</p>
+            <p class="pEffect">示例：</p>
+            <div class="textarea">
+                &lt;table border="0"&gt;<br>
+                &emsp;&lt;tr&gt;<br>
+                &emsp;&emsp;&lt;td>Row 1, cell 1&lt;/td&gt;<br>
+                &emsp;&emsp;&lt;td>Row 1, cell 2&lt;/td&gt;<br>
+                &emsp;&lt;/tr&gt;<br>
+                &lt;table&gt;
+            </div>
+            <p class="pEffect">效果：</p>
+            <div class="showarea">
+                <table border="0">
+                    <tr>
+                        <td>Row 1, cell 1</td>
+                        <td>Row 1, cell 2</td>
+                    </tr>
+                </table>
+            </div>
+
+            <h3>cellspacing属性</h3>
+            <p>cellspacing 属性规定单元之间的空间，以像素计。若不设置该属性，则其默认值为 cellspacing="2"。</p>
+            <p>以下示例取消了表格单元之间的空间。</p>
+            <p class="pEffect">示例：</p>
+            <div class="textarea">
+                &lt;table border="1" cellspacing="0"&gt;<br>
+                &emsp;&lt;tr&gt;<br>
+                &emsp;&emsp;&lt;td>Row 1, cell 1&lt;/td&gt;<br>
+                &emsp;&emsp;&lt;td>Row 1, cell 2&lt;/td&gt;<br>
+                &emsp;&lt;/tr&gt;<br>
+                &lt;table&gt;
+            </div>
+            <p class="pEffect">效果：</p>
+            <div class="showarea">
+                <table border="1" cellspacing="0">
+                    <tr>
+                        <td>Row 1, cell 1</td>
+                        <td>Row 1, cell 2</td>
+                    </tr>
+                </table>
+            </div>
+            <h3>cellpadding属性</h3>
+            <p>cellpadding 属性规定单元边沿与单元内容之间的空间，以像素计。</p>
+            <p>以下示例是 没有单元格边距的表格 和 有单元格边距 的表格。</p>
+            <p class="pEffect">示例：</p>
+            <div class="textarea">
+                &lt;table border="1"&gt;<br>
+                &emsp;&lt;tr&gt;<br>
+                &emsp;&emsp;&lt;th&gt;Month&lt;/th&gt;<br>
+                &emsp;&emsp;&lt;th&gt;Savings&lt;/th&gt;<br>
+                &emsp;&lt;/tr&gt;<br>
+                &emsp;&lt;tr&gt;<br>
+                &emsp;&emsp;&lt;td&gt;January&lt;/td&gt;<br>
+                &emsp;&emsp;&lt;td&gt;$100&lt;/td&gt;<br>
+                &emsp;&lt;/tr&gt;<br>
+                &lt;/table&gt;
+            </div>
+            <div class="textarea">
+                &lt;table border="1" cellpadding="10"&gt;<br>
+                &emsp;&lt;tr&gt;<br>
+                &emsp;&emsp;&lt;th&gt;Month&lt;/th&gt;<br>
+                &emsp;&emsp;&lt;th&gt;Savings&lt;/th&gt;<br>
+                &emsp;&lt;/tr&gt;<br>
+                &emsp;&lt;tr&gt;<br>
+                &emsp;&emsp;&lt;td&gt;January&lt;/td&gt;<br>
+                &emsp;&emsp;&lt;td&gt;$100&lt;/td&gt;<br>
+                &emsp;&lt;/tr&gt;<br>
+                &lt;/table&gt;
+            </div>
+            <p class="pEffect">效果：</p>
+            <div class="showarea">
+                <table border="1">
+                    <tr>
+                        <th>Month</th>
+                        <th>Savings</th>
+                    </tr>
+                    <tr>
+                        <td>January</td>
+                        <td>$100</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="showarea">
+                <table border="1" cellpadding="10">
+                    <tr>
+                        <th>Month</th>
+                        <th>Savings</th>
+                    </tr>
+                    <tr>
+                        <td>January</td>
+                        <td>$100</td>
+                    </tr>
+                </table>
+            </div>
+
+            <h2>表格的跨行与跨列</h2>
+            <h3>colspan 属性 与 rowspan 属性</h3>
+            <p>
+                colspan 和 rowspan 属性可以使用在table内标签上，如 &lt;th&gt;、&lt;tr&gt;、&lt;td&gt; 标签上。
+            </p>
+            <p class="pEffect">示例：</p>
+            <div class="textarea">
+                &lt;table border="1"&gt;<br>
+                &emsp;&lt;tr&gt;<br>
+                &emsp;&emsp;&lt;th rowspan="2"&gt;跨两行&lt;/th&gt;<br>
+                &emsp;&emsp;&lt;th&gt;row&lt;/th&gt;<br>
+                &emsp;&lt;/tr&gt;<br>
+                &emsp;&lt;tr&gt;<br>
+                &emsp;&emsp;&lt;td&gt;row&lt;/td&gt;<br>
+                &emsp;&lt;/tr&gt;<br>
+                &lt;/table&gt;
+            </div>
+            <div class="textarea">
+                &lt;table border="1" cellpadding="10"&gt;<br>
+                &emsp;&lt;tr&gt;<br>
+                &emsp;&emsp;&lt;th colspan="2"&gt;跨两列&lt;/th&gt;<br>
+                &emsp;&lt;/tr&gt;<br>
+                &emsp;&lt;tr&gt;<br>
+                &emsp;&emsp;&lt;td&gt;col&lt;/td&gt;<br>
+                &emsp;&emsp;&lt;td&gt;col&lt;/td&gt;<br>
+                &emsp;&lt;/tr&gt;<br>
+                &lt;/table&gt;
+            </div>
+            <p class="pEffect">效果：</p>
+            <div class="showarea">
+                <table border="1">
+                    <tr>
+                        <th rowspan="2">跨两行</th>
+                        <th>row</th>
+                    </tr>
+                    <tr>
+                        <td>row</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="showarea">
+                <table border="1">
+                    <tr>
+                        <th colspan="2">跨两列</th>
+                    </tr>
+                    <tr>
+                        <td>col</td>
+                        <td>col</td>
+                    </tr>
+                </table>
+            </div>
+
+            <h2>部分标签与属性</h2>
+            <h3>HTML表格标签：</h3>
+            <p class="pEffect">标签：</p>
+            <table class="table">
+                <tr>
+                    <th>标签</th>
+                    <th>描述</th>
+                </tr>
+                <tr>
+                    <td>&lt;table&gt;</td>
+                    <td>定义表格</td>
+                </tr>
+                <tr>
+                    <td>&lt;th&gt;</td>
+                    <td>定义表格的表头</td>
+                </tr>
+                <tr>
+                    <td>&lt;tr&gt;</td>
+                    <td>定义表格的行</td>
+                </tr>
+                <tr>
+                    <td>&lt;td&gt;</td>
+                    <td>定义表格单元</td>
+                </tr>
+                <tr>
+                    <td>&lt;caption&gt;</td>
+                    <td>定义表格标题</td>
+                </tr>
+                <tr>
+                    <td>&lt;colgroup&gt;</td>
+                    <td>定义表格列的组</td>
+                </tr>
+                <tr>
+                    <td>&lt;col&gt;</td>
+                    <td>定义用于表格列的属性</td>
+                </tr>
+                <tr>
+                    <td>&lt;thead&gt;</td>
+                    <td>定义表格的页眉</td>
+                </tr>
+                <tr>
+                    <td>&lt;tbody&gt;</td>
+                    <td>定义表格的主体</td>
+                </tr>
+                <tr>
+                    <td>&lt;tfoot&gt;</td>
+                    <td>定义表格的页脚
+                    </td>
+                </tr>
+            </table>
+
+            <h3>table标签属性</h3>
+            <p class="pEffect">属性：</p>
+            <table class="table">
+                <tr>
+                    <th>属性</th>
+                    <th>值</th>
+                    <th>描述</th>
+                </tr>
+                <tr>
+                    <td>align</td>
+                    <td>left<br>
+                        center<br>
+                        right
+                    </td>
+                    <td>规定表格相对周围元素的对齐方式。</td>
+                </tr>
+                <tr>
+                    <td>bgcolor</td>
+                    <td><i>rgb(x,x,x)<br>
+                        #xxxxxx<br>
+                        colorname</i></td>
+                    <td>规定表格的背景颜色。</td>
+                </tr>
+                <tr>
+                    <td>border</td>
+                    <td>1<br>
+                        ""
+                    </td>
+                    <td>规定表格单元是否拥有边框。</td>
+                </tr>
+                <tr>
+                    <td>cellpadding</td>
+                    <td><i>pixels</i></td>
+                    <td>规定单元边沿与其内容之间的空白。</td>
+                </tr>
+                <tr>
+                    <td>cellspacing</td>
+                    <td><i>pixels</i></td>
+                    <td>规定单元格之间的空白。</td>
+                </tr>
+                <tr>
+                    <td>frame</td>
+                    <td>void<br>
+                        above<br>
+                        below<br>
+                        hsides<br>
+                        lhs<br>
+                        rhs<br>
+                        vsides<br>
+                        box<br>
+                        border
+                    </td>
+                    <td>规定外侧边框的哪个部分是可见的。</td>
+                </tr>
+                <tr>
+                    <td>rules</td>
+                    <td>none<br>
+                        groups<br>
+                        rows<br>
+                        cols<br>
+                        all
+                    </td>
+                    <td>规定内侧边框的哪个部分是可见的。</td>
+                </tr>
+                <tr>
+                    <td>summary</td>
+                    <td><i>text</i></td>
+                    <td>规定表格的摘要。</td>
+                </tr>
+                <tr>
+                    <td>width</td>
+                    <td><i>pixels<br>
+                        %</i></td>
+                    <td>规定表格的宽度。</td>
+                </tr>
+            </table>
+            <!--不要再这以下写卡片的内容-->
+        </div>
+
+    </div>
+    <div class="clear"></div>
+</div>
+<div class="footer">
+    <p>made by Yueby</p>
+</div>
+</body>
+
+</html>

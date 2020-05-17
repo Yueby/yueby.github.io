@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+    <link rel="icon" type="image/x-ico" href="../../image/icon.png">
+    <link rel="stylesheet" href="../../css/main.css">
+</head>
+
+<body>
+<div class="header">
+    <h1><a href="../../index.html">HTML</a></h1>
+</div>
+
+<input type="checkbox" id="trigger">
+
+<label for="trigger">
+    <div class="hamburger-container">
+        <span></span>
+        <span></span>
+    </div>
+</label>
+
+<div class="containerBox">
+    <div class="leftNav">
+        <ul>
+            <li><a href="html_basic.html">HTML基本结构</a></li>
+            <li><a href="html_meta.html">&lt;meta&gt;标签</a></li>
+            <li><a href="html_background.html"
+                   style="background-color: #20A3FB;color: white;border: 1px solid white;">页面背景</a></li>
+            <li><a href="html_text.html">文本相关</a></li>
+            <li><a href="html_textlayout.html">文字布局</a></li>
+            <li><a href="html_image.html">图像</a></li>
+            <li><a href="html_link.html">链接</a></li>
+            <li><a href="html_marquee.html">滚动标签</a></li>
+            <li><a href="html_table.html">表格</a></li>
+            <li><a href="html_form.html">表单</a></li>
+            <li><a href="html_frameset.html">框架</a></li>
+        </ul>
+
+    </div>
+
+    <div class="rightWrapper">
+        <!--背景-->
+        <a name="background"></a>
+        <div class="containerCard">
+            <h1>页面背景</h1>
+            <h2>页面背景色</h2>
+            <p class="pEffect">示例：</p>
+            <div class="textarea">
+                &lt;body bgcolor="#ffb6c1"&gt;<br>
+                &emsp;&emsp;Hello World！<br>
+                &lt;/body&gt;<br>
+            </div>
+            <ul>
+                <li>bgcolor属性是设置当前标签的背景颜色</li>
+            </ul>
+            <p>
+                在body标签中使用bgcolor属性的话，会使整个网页的背景颜色设置为如下颜色。
+            </p>
+            <div class="showarea" style="height: 100px;background-color: #ffb6c1;"></div>
+            <h2>背景图片</h2>
+            <p class="pEffect">示例：</p>
+            <div class="textarea">
+                &lt;body background="../image/background.jpg"&gt;<br><br>
+                &lt;/body&gt;
+            </div>
+            <ul>
+                <li>background属性可以设置当前标签的背景图片</li>
+            </ul>
+            <p>
+                以上代码用来把页面的背景图片设置为background属性内的地址的图片。<br>
+                看起来如下所示：
+            </p>
+            <div class="showarea"
+                 style="background-image: url('../../image/background.jpg');background-size: contain;background-repeat: no-repeat;height:191.4px ;border:0;width:340.3px ;">
+                <h2 style="border: 0; margin:0;">我是一个标题</h2>
+                <p>我是一个段落</p>
+            </div>
+        </div>
+
+        <!--不要再这以下写卡片的内容-->
+    </div>
+    <div class="clear"></div>
+</div>
+<div class="footer">
+    <p>made by Yueby</p>
+</div>
+</body>
+
+</html>

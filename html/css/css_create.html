@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <link rel="icon" type="image/x-ico" href="../../image/icon.png">
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/example.css">
+</head>
+
+<body>
+<div class="header">
+    <h1><a href="../../index.html">CSS</a></h1>
+</div>
+
+<input type="checkbox" id="trigger">
+
+<label for="trigger">
+    <div class="hamburger-container">
+        <span></span>
+        <span></span>
+    </div>
+</label>
+
+<div class="containerBox">
+    <div class="leftNav">
+        <ul>
+            <li><a href="css_intro.html">介绍</a></li>
+            <li><a href="css_grammer.html">语法</a></li>
+            <li><a href="css_create.html" style="background-color: #20A3FB;color: white;border: 1px solid white;">创建</a></li>
+            <li><a href="css_selector.html">选择器</a></li>
+            <li><a href="css_background.html">背景</a></li>
+            <li><a href="css_text.html">文本</a></li>
+            <li><a href="css_font.html">字体</a></li>
+            <li><a href="css_boxmodel.html">盒子模型</a></li>
+            <li><a href="css_link.html">链接</a></li>
+        </ul>
+    </div>
+
+    <div class="rightWrapper">
+
+        <div class="containerCard">
+            <h1>创建</h1>
+            <p class="intro">当读到一个样式表时，浏览器会根据它来格式化 HTML 文档。</p>
+
+            <h2>如何插入样式表</h2>
+            <p>插入样式表的方法有三种:</p>
+            <ul>
+                <li>外部样式表(External style sheet)</li>
+                <li>内部样式表(Internal style sheet)</li>
+                <li>内联样式(Inline style)</li>
+            </ul>
+
+            <h3>外部样式表</h3>
+            <p>当样式需要应用于很多页面时，外部样式表将是理想的选择。在使用外部样式表的情况下，你可以通过改变一个文件来改变整个站点的外观。每个页面使用 &lt;link&gt; 标签链接到样式表。 &lt;link&gt;
+                标签在（文档的）头部：</p>
+            <p class="pEffect">示例：</p>
+            <div class="textarea">
+                &lt;head&gt;<br>
+                &emsp;&lt;link rel="stylesheet" type="text/css" href="mystyle.css"&gt;<br>
+                &lt;/head&gt;
+            </div>
+            <p>浏览器会从文件 mystyle.css 中读到样式声明，并根据它来格式文档。</p>
+            <p>外部样式表可以在任何文本编辑器中进行编辑。文件不能包含任何的 html 标签。样式表应该以 .css 扩展名进行保存。下面是一个样式表文件的例子：</p>
+            <p class="pEffect">效果：</p>
+            <div class="showarea">
+                hr {color:sienna;}<br>
+                p {margin-left:20px;}<br>
+                body {background-image:url("/images/back40.gif");}
+            </div>
+            <p class="pEffect"> 不要在属性值与单位之间留有空格（如："margin-left: 20 px" ），正确的写法是 "margin-left: 20px" 。</p>
+            <h3>内部样式表</h3>
+            <p>由于要将表现和内容混杂在一起，内联样式会损失掉样式表的许多优势。请慎用这种方法，例如当样式仅需要在一个元素上应用一次时。</p>
+            <p>要使用内联样式，你需要在相关的标签内使用样式（style）属性。Style 属性可以包含任何 CSS 属性。本例展示如何改变段落的颜色和左外边距：</p>
+            <p class="pEffect">示例：</p>
+            <div class="textarea">
+                &lt;p style="color:sienna;margin-left:20px"&gt;这是一个段落。&lt;/p&gt;
+            </div>
+
+            <h3>多重样式</h3>
+            <p>如果某些属性在不同的样式表中被同样的选择器定义，那么属性值将从更具体的样式表中被继承过来。&nbsp;</p>
+            <p>例如，外部样式表拥有针对 h3 选择器的三个属性：</p>
+            <p class="pEffect">示例：</p>
+            <div class="textarea">
+                h3<br>
+                {<br>
+                &emsp;&emsp;color:red;<br>
+                &emsp;&emsp;text-align:left;<br>
+                &emsp;&emsp;font-size:8pt;<br>
+                }
+            </div>
+            <p>而内部样式表拥有针对 h3 选择器的两个属性：</p>
+            <p class="pEffect">示例：</p>
+            <div class="textarea">
+                h3<br>
+                {<br>
+                &emsp;&emsp;text-align:right;<br>
+                &emsp;&emsp;font-size:20pt;<br>
+                }
+            </div>
+            <p>假如拥有内部样式表的这个页面同时与外部样式表链接，那么 h3 得到的样式是：</p>
+            <p class="pEffect">示例：</p>
+            <div class="textarea">
+                color:red;
+                text-align:right;
+                font-size:20pt;
+            </div>
+            <p>即颜色属性将被继承于外部样式表，而文字排列（text-alignment）和字体尺寸（font-size）会被内部样式表中的规则取代。</p>
+            <h3>多重样式优先级</h3>
+            <p>样式表允许以多种方式规定样式信息。样式可以规定在单个的 HTML 元素中，在 HTML 页的头元素中，或在一个外部的 CSS 文件中。甚至可以在同一个 HTML 文档内部引用多个外部样式表。</p>
+            <p>一般情况下，优先级如下：</p>
+            <b>（内联样式）Inline style &gt; （内部样式）Internal style sheet &gt;（外部样式）External style sheet &gt; 浏览器默认样式</b><br>
+            <p class="pEffect">示例：</p>
+            <div class="textarea">
+                &lt;head&gt;<br>
+                &emsp;&emsp;&lt;!-- 外部样式 style.css --&gt;<br>
+                &emsp;&emsp;&lt;link rel="stylesheet" type="text/css" href="style.css"/&gt;<br>
+                &emsp;&emsp;&lt;style type="text/css"&gt;<br>
+                &emsp;&emsp;/* 内部样式 */<br>
+                &emsp;&emsp;h3{color:green;}<br>
+                &emsp;&emsp;&lt;/style&gt;<br>
+                &lt;/head&gt;<br><br>
+                &lt;body&gt;<br>
+                &emsp;&emsp;&lt;h3&gt;测试！&lt;/h3&gt;<br>
+                &lt;/body&gt;
+            </div>
+            <p class="pEffect"><strong>注意：</strong>如果外部样式放在内部样式的后面，则外部样式将覆盖内部样式。</p>
+
+        </div>
+        <!--不要再这以下写卡片的内容-->
+    </div>
+    <div class="clear"></div>
+</div>
+<div class="footer">
+    <p>made by Yueby</p>
+</div>
+</body>
+
+</html>

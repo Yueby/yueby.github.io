@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+    <link rel="icon" type="image/x-ico" href="../../image/icon.png">
+    <link rel="stylesheet" href="../../css/main.css">
+</head>
+
+<body>
+<div class="header">
+    <h1><a href="../../index.html">HTML</a></h1>
+</div>
+
+<input type="checkbox" id="trigger">
+
+<label for="trigger">
+    <div class="hamburger-container">
+        <span></span>
+        <span></span>
+    </div>
+</label>
+
+<div class="containerBox">
+    <div class="leftNav">
+        <ul>
+            <li><a href="html_basic.html">HTML基本结构</a></li>
+            <li><a href="html_meta.html">&lt;meta&gt;标签</a></li>
+            <li><a href="html_background.html">页面背景</a></li>
+            <li><a href="html_text.html">文本相关</a></li>
+            <li><a href="html_textlayout.html">文字布局</a></li>
+            <li><a href="html_image.html">图像</a></li>
+            <li><a href="html_link.html">链接</a></li>
+            <li><a href="html_marquee.html">滚动标签</a></li>
+            <li><a href="html_table.html">表格</a></li>
+            <li><a href="html_form.html"
+                   style="background-color: #20A3FB;color: white;border: 1px solid white;">表单</a></li>
+            <li><a href="html_frameset.html">框架</a></li>
+        </ul>
+
+    </div>
+
+    <div class="rightWrapper">
+        <!--表单-->
+        <div class="containerCard">
+            <h1>表单</h1>
+            <h2>表单</h2>
+            <p>表单是一个包含表单元素的区域。</p>
+            <p>表单元素是允许用户在表单中输入内容,比如：文本域(textarea)、下拉列表、单选框(radio-buttons)、复选框(checkboxes)等等。</p>
+            <p>表单使用表单标签 &lt;form&gt; 来设置:</p>
+            <p class="pEffect">示例：</p>
+            <div class="textarea">
+                &lt;form&gt;<br><br>
+                ·<br><br>
+                <i>input 元素</i><br><br>
+                ·<br><br>
+                &lt;/form&gt;
+            </div>
+
+            <h2>表单-输入元素</h2>
+            <p>多数情况下被用到的表单标签是输入标签（&lt;input&gt;）。</p>
+            <p>输入类型是由类型属性（type）定义的。大多数经常被用到的输入类型如下：</p>
+
+            <h3>文本域(Text Fields)</h3>
+            <p>文本域通过&lt;input type="text"&gt; 标签来设定，当用户要在表单中键入字母、数字等内容时，就会用到文本域。</p>
+            <p class="pEffect">示例：</p>
+            <div class="textarea">
+                &lt;form&gt;<br>
+                First name:
+                &lt;input type="text" name="firstname"&gt;&lt;br&gt;<br>
+                Last name:
+                &lt;input type="text" name="lastname"&gt;<br>
+                &lt;/form&gt;
+            </div>
+            <p class="pEffect">效果：</p>
+            <div class="showarea">
+                <form>
+                    First name: <input type="text" name="firstname"><br>
+                    Last &emsp;name: <input type="text" name="lastname">
+                </form>
+            </div>
+            <p><b> 注意:</b>表单本身并不可见。同时，在大多数浏览器中，文本域的默认宽度是 20 个字符。
+            </p>
+            <h3>密码字段</h3>
+            <p>密码字段通过标签&lt;input type="password"&gt; 来定义:</p>
+            <p class="pEffect">示例：</p>
+            <div class="textarea">
+                &lt;form&gt;<br>
+                Password:
+                &lt;input type="password" name="pwd"&gt;<br>
+                &lt;/form&gt;
+            </div>
+            <p class="pEffect">效果：</p>
+            <div class="showarea">
+                <form>
+                    Password: <input type="password" name="pwd">
+                </form>
+            </div>
+            <p><b>注意:</b>密码字段字符不会明文显示，而是以星号或圆点替代。</p>
+            <h3>单选按钮(Radio Buttons)</h3>
+            <p>&lt;input type="radio"&gt; 标签定义了表单单选框选项</p>
+            <p class="pEffect">示例：</p>
+            <div class="textarea">
+                &lt;form&gt;<br>
+                &lt;input type="radio" name="sex" value="male"&gt;Male&lt;br&gt;<br>
+                &lt;input type="radio" name="sex" value="female"&gt;Female<br>
+                &lt;/form&gt;
+            </div>
+            <p class="pEffect">效果：</p>
+            <div class="showarea">
+                <form>
+                    <input type="radio" name="sex" value="male">Male<br>
+                    <input type="radio" name="sex" value="female">Female
+                </form>
+            </div>
+
+            <h3>复选框(Checkboxes)</h3>
+            <p>&lt;input type="checkbox"&gt; 定义了复选框. 用户需要从若干给定的选择中选取一个或若干选项。</p>
+            <p class="pEffect">示例：</p>
+            <div class="textarea">
+                &lt;form&gt;<br>
+                &lt;input type="checkbox" name="vehicle" value="Bike"&gt;I have a bike&lt;br&gt;<br>
+                &lt;input type="checkbox" name="vehicle" value="Car"&gt;I have a car<br>
+                &lt;/form&gt;
+            </div>
+            <p class="pEffect">效果：</p>
+            <div class="showarea">
+                <form>
+                    <input type="checkbox" name="vehicle" value="Bike">I have a bike<br>
+                    <input type="checkbox" name="vehicle" value="Car">I have a car
+                </form>
+            </div>
+
+            <h3>提交按钮(Submit Button)</h3>
+            <p>&lt;input type="submit"&gt; 定义了提交按钮.</p>
+            <p>当用户单击确认按钮时，表单的内容会被传送到另一个文件。表单的动作属性定义了目的文件的文件名。由动作属性定义的这个文件通常会对接收到的输入数据进行相关的处理。:</p>
+            <p class="pEffect">示例：</p>
+            <div class="textarea">
+                &lt;form name="input" action="xxx.xxx" method="get"&gt;<br>
+                Username:
+                &lt;input type="text" name="user"&gt;<br>
+                &lt;input type="submit" value="Submit"&gt;<br>
+                &lt;/form&gt;
+            </div>
+            <p class="pEffect">效果：</p>
+            <div class="showarea">
+                <form name="input" action="" method="get">
+                    Username: <input type="text" name="user">
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+
+            <h3>下拉列表(Drop-down List)</h3>
+            <p>&lt;select&gt; 元素用来创建下拉列表。</p>
+            <p>&lt;select&gt; 元素中的 &lt;option&gt; 标签定义了列表中的可用选项。</p>
+            <p class="pEffect">示例：</p>
+            <div class="textarea">
+                &lt;select&gt;<br>
+                &emsp;&lt;option value="volvo"&gt;Volvo&lt;/option&gt;<br>
+                &emsp;&lt;option value="saab"&gt;Saab&lt;/option&gt;<br>
+                &emsp;&lt;option value="opel"&gt;Opel&lt;/option&gt;<br>
+                &emsp;&lt;option value="audi"&gt;Audi&lt;/option&gt;<br>
+                &lt;/select&gt;
+            </div>
+            <p class="pEffect">效果：</p>
+            <div class="showarea">
+                <select>
+                    <option value="volvo">Volvo</option>
+                    <option value="saab">Saab</option>
+                    <option value="opel">Opel</option>
+                    <option value="audi">Audi</option>
+                </select>
+            </div>
+
+            <p class="pEffect">标签：</p>
+            <table class="table">
+                <tr>
+                    <th>标签</th>
+                    <th>描述</th>
+                </tr>
+                <tr>
+                    <td>&lt;form&gt;</td>
+                    <td> 定义供用户输入的表单</td>
+                </tr>
+                <tr>
+                    <td>&lt;input&gt;</a></td>
+                    <td>定义输入域</td>
+                </tr>
+                <tr>
+                    <td>&lt;textarea&gt;</td>
+                    <td>定义文本域 (一个多行的输入控件)</td>
+                </tr>
+                <tr>
+                    <td>&lt;label&gt;</td>
+                    <td>定义了 &lt;input&gt; 元素的标签，一般为输入标题</td>
+                </tr>
+                <tr>
+                    <td>&lt;fieldset&gt;</td>
+                    <td>定义了一组相关的表单元素，并使用外框包含起来</td>
+                </tr>
+                <tr>
+                    <td>&lt;legend&gt;</td>
+                    <td>定义了 &lt;fieldset&gt; 元素的标题</td>
+                </tr>
+                <tr>
+                    <td>&lt;select&gt;</td>
+                    <td>定义了下拉选项列表</td>
+                </tr>
+                <tr>
+                    <td>&lt;optgroup&gt;</td>
+                    <td>定义选项组</td>
+                </tr>
+                <tr>
+                    <td>&lt;option&gt;</td>
+                    <td>定义下拉列表中的选项</td>
+                </tr>
+                <tr>
+                    <td>&lt;button&gt;</td>
+                    <td>定义一个点击按钮</td>
+                </tr>
+                <tr>
+                    <td>&lt;datalist&gt;</td>
+                    <td>指定一个预先定义的输入控件选项列表</td>
+                </tr>
+                <tr>
+                    <td>&lt;keygen&gt;</a></td>
+                    <td>定义了表单的密钥对生成器字段</td>
+                </tr>
+                <tr>
+                    <td>&lt;output&gt;</a></td>
+                    <td>定义一个计算结果</td>
+                </tr>
+            </table>
+        </div>
+
+        <!--不要再这以下写卡片的内容-->
+    </div>
+    <div class="clear"></div>
+</div>
+<div class="footer">
+    <p>made by Yueby</p>
+</div>
+</body>
+
+</html>

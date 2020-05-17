@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <link rel="icon" type="image/x-ico" href="../../image/icon.png">
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/example.css">
+</head>
+
+<body>
+<div class="header">
+    <h1><a href="../../index.html">CSS</a></h1>
+</div>
+
+<input type="checkbox" id="trigger">
+
+<label for="trigger">
+    <div class="hamburger-container">
+        <span></span>
+        <span></span>
+    </div>
+</label>
+
+<div class="containerBox">
+    <div class="leftNav">
+        <ul>
+            <li><a href="css_intro.html">介绍</a></li>
+            <li><a href="css_grammer.html">语法</a></li>
+            <li><a href="css_create.html">创建</a></li>
+            <li><a href="css_selector.html">选择器</a></li>
+            <li><a href="css_background.html">背景</a></li>
+            <li><a href="css_text.html" style="background-color: #20A3FB;color: white;border: 1px solid white;">文本</a></li>
+            <li><a href="css_font.html">字体</a></li>
+            <li><a href="css_boxmodel.html">盒子模型</a></li>
+            <li><a href="css_link.html">链接</a></li>
+        </ul>
+    </div>
+
+    <div class="rightWrapper">
+
+        <div class="containerCard">
+            <h1>文本</h1>
+            <h2>文本格式</h2>
+            <h3>文本颜色</h3>
+            <p>颜色属性被用来设置文字的颜色。</p>
+            <p>颜色是通过CSS最经常的指定：</p>
+            <ul>
+                <li>十六进制值 - 如: <strong>＃FF0000</strong></li>
+                <li>一个RGB值 - 如: <strong>RGB(255,0,0)</strong></li>
+                <li>颜色的名称 - 如: <strong>red</strong></li>
+            </ul>
+            <p>一个网页的背景颜色是指在主体内的选择：</p>
+            <p class="pEffect">示例：</p>
+            <div class="textarea">
+                body {color:red;}<br>
+                h1 {color:#ffb6c1;}<br>
+                h2 {color:rgb(55,255,255);}
+            </div>
+            <p class="pEffect">效果：</p>
+            <div class="showarea">
+                <h1 style="color: #ffb6c1;">这是h1标题</h1>
+                <h2 style="margin: 0;color:rgb(55,255,255);border: 0;padding: 0;">这是h2标题</h2>
+                <p style="color: red;">这是一个普通的段落。请注意,本文是红色的。页面中定义默认的文本颜色选择器。</p>
+                <p class="example">这是一个类为"example"的段落。这个文本是蓝色的。</p>
+            </div>
+            <p class="pEffect"><strong>注意：</strong>对于W3C标准的CSS：如果你定义了颜色属性，你还必须定义背景色属性。</p>
+
+            <h3>文本的对齐方式</h3>
+            <p>文本排列属性是用来设置文本的水平对齐方式。</p>
+            <p>文本可居中或对齐到左或右,两端对齐.</p>
+            <p>当text-align设置为"justify"，每一行被展开为宽度相等，左，右外边距是对齐（如杂志和报纸）。</p>
+            <p class="pEffect">示例：</p>
+            <div class="textarea">
+                h1 {text-align:center;}<br>
+                p.date {text-align:right;}<br>
+                p.main {text-align:justify;}
+            </div>
+            <p class="pEffect">效果：</p>
+            <div class="showarea">
+                <h1 style="text-align: center;">CSS text-align 实例</h1>
+                <p class="date">2015 年 3 月 14 号</p>
+                <p class="main">
+                    “当我年轻的时候，我梦想改变这个世界；当我成熟以后，我发现我不能够改变这个世界，我将目光缩短了些，决定只改变我的国家；当我进入暮年以后，我发现我不能够改变我们的国家，我的最后愿望仅仅是改变一下我的家庭，但是，这也不可能。当我现在躺在床上，行将就木时，我突然意识到：如果一开始我仅仅去改变我自己，然后，我可能改变我的家庭；在家人的帮助和鼓励下，我可能为国家做一些事情；然后，谁知道呢?我甚至可能改变这个世界。”</p>
+                <p><b>注意：</b> 重置浏览器窗口大小查看 &quot;justify&quot; 是如何工作的。</p>
+            </div>
+
+            <h3>文本修饰</h3>
+            <p>text-decoration 属性用来设置或删除文本的装饰。</p>
+            <p>从设计的角度看 text-decoration属性主要是用来删除链接的下划线：</p>
+            <p class="pEffect">示例：</p>
+            <div class="textarea">
+                a {text-decoration:none;}
+            </div>
+            <p class="pEffect">效果：</p>
+            <div class="showarea">
+                链接到：<a href="https://www.baidu.com/" target="_blank" style="text-decoration:none;">www.baidu.com</a>
+            </div>
+            <p>也可以这样装饰文字：</p>
+            <p class="pEffect">示例：</p>
+            <div class="textarea">
+                h1 {text-decoration:overline;}<br>
+                h2 {text-decoration:line-through;}<br>
+                h3 {text-decoration:underline;}
+            </div>
+            <p class="pEffect">效果：</p>
+            <div class="showarea">
+                <h1 style="margin: 10px;text-decoration: overline;">This is heading 1</h1>
+                <h2 style="margin: 10px;text-decoration: line-through;">This is heading 2</h2>
+                <h3 style="margin: 10px;text-decoration: underline;">This is heading 3</h3>
+            </div>
+
+            <h3>文本转换</h3>
+            <p>文本转换属性是用来指定在一个文本中的大写和小写字母。</p>
+            <p>可用于所有字句变成大写或小写字母，或每个单词的首字母大写。</p>
+            <p class="pEffect">示例：</p>
+            <div class="textarea">
+                p.uppercase {text-transform:uppercase;}<br>
+                p.lowercase {text-transform:lowercase;}<br>
+                p.capitalize {text-transform:capitalize;}
+            </div>
+            <p class="pEffect">效果：</p>
+            <div class="showarea">
+                <p class="uppercase">This is some text.</p>
+                <p class="lowercase">This is some text.</p>
+                <p class="capitalize">This is some text.</p>
+            </div>
+
+            <h3>文本缩进</h3>
+            <p>文本缩进属性是用来指定文本的第一行的缩进。</p>
+            <p class="pEffect">示例：</p>
+            <div class="textarea">
+                p {text-indent:50px;}
+            </div>
+            <p class="pEffect">效果：</p>
+            <div class="showarea" style="text-indent: 50px;">
+                <p>In my younger and more vulnerable years my father gave me some advice that I've been turning over in
+                    my mind ever since. 'Whenever you feel like criticizing anyone,' he told me, 'just remember that all
+                    the people in this world haven't had the advantages that you've had.'</p>
+            </div>
+            <p class="pEffect">属性：</p>
+            <table class="table">
+                <tr>
+                    <th>属性</th>
+                    <th>描述</th>
+                </tr>
+                <tr>
+                    <td>color</td>
+                    <td>设置文本颜色</td>
+                </tr>
+                <tr>
+                    <td>direction</td>
+                    <td>设置文本方向。</td>
+                </tr>
+                <tr>
+                    <td>letter-spacing</td>
+                    <td>设置字符间距</td>
+                </tr>
+                <tr>
+                    <td>line-height</td>
+                    <td>设置行高</td>
+                </tr>
+                <tr>
+                    <td>text-align</td>
+                    <td>对齐元素中的文本</td>
+                </tr>
+                <tr>
+                    <td>text-decoration</td>
+                    <td>向文本添加修饰</td>
+                </tr>
+                <tr>
+                    <td>xt-indent.html">text-indent</a></td>
+                    <td>缩进元素中文本的首行</td>
+                </tr>
+                <tr>
+                    <td>text-shadow</td>
+                    <td>设置文本阴影</td>
+                </tr>
+                <tr>
+                    <td>text-transform</td>
+                    <td>控制元素中的字母</td>
+                </tr>
+                <tr>
+                    <td>unicode-bidi</td>
+                    <td>设置或返回文本是否被重写&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>vertical-align</td>
+                    <td>设置元素的垂直对齐</td>
+                </tr>
+                <tr>
+                    <td>white-space</td>
+                    <td>设置元素中空白的处理方式</td>
+                </tr>
+                <tr>
+                    <td>word-spacing</td>
+                    <td>设置字间距</td>
+                </tr>
+            </table>
+
+        </div>
+
+        <!--不要再这以下写卡片的内容-->
+    </div>
+    <div class="clear"></div>
+</div>
+<div class="footer">
+    <p>made by Yueby</p>
+</div>
+</body>
+
+</html>

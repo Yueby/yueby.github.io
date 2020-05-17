@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <link rel="icon" type="image/x-ico" href="../../image/icon.png">
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/example.css">
+</head>
+
+<body>
+<div class="header">
+    <h1><a href="../../index.html">CSS</a></h1>
+</div>
+
+<input type="checkbox" id="trigger">
+
+<label for="trigger">
+    <div class="hamburger-container">
+        <span></span>
+        <span></span>
+    </div>
+</label>
+
+<div class="containerBox">
+    <div class="leftNav">
+        <ul>
+            <li><a href="css_intro.html">介绍</a></li>
+            <li><a href="css_grammer.html">语法</a></li>
+            <li><a href="css_create.html">创建</a></li>
+            <li><a href="css_selector.html">选择器</a></li>
+            <li><a href="css_background.html">背景</a></li>
+            <li><a href="css_text.html">文本</a></li>
+            <li><a href="css_font.html">字体</a></li>
+            <li><a href="css_boxmodel.html" style="background-color: #20A3FB;color: white;border: 1px solid white;">盒子模型</a></li>
+            <li><a href="css_link.html">链接</a></li>
+        </ul>
+    </div>
+
+    <div class="rightWrapper">
+
+        <div class="containerCard">
+            <h1>盒子模型</h1>
+            <h2>CSS 盒子模型(Box Model)</h2>
+            <p>所有HTML元素可以看作盒子，在CSS中，"box model"这一术语是用来设计和布局时使用。</p>
+            <p>CSS盒模型本质上是一个盒子，封装周围的HTML元素，它包括：边距，边框，填充，和实际内容。</p>
+            <p>盒模型允许我们在其它元素和周围元素边框之间的空间放置元素。</p>
+            <p>下面的图片说明了盒子模型(Box Model)：</p>
+            <div style="width: 400px;color:lightblue;border:1px dashed lightblue;position:relative;">
+                <span style="position:absolute;line-height: 40px;text-indent: 120px;"><b>Margin</b></span>
+                <div style="color:white;border: 40px solid lightblue;margin: 40px;padding:40px;position: relative;">
+                    <span style="position: absolute;top:-25px;"><b>Border</b></span>
+                    <span style="position: absolute;top:0;color: lightblue;line-height: 40px;"><b>Padding</b></span>
+                    <div style="height: 100px;border: 1px dashed lightblue;">
+                        <span style="color: lightblue;"><b>Content</b></span>
+                    </div>
+                </div>
+            </div>
+            <p>不同部分的说明：</p>
+            <ul>
+                <li><b>Margin(外边距)</b> - 清除边框外的区域，外边距是透明的。</li>
+                <li><b>Border(边框)</b> - 围绕在内边距和内容外的边框。</li>
+                <li><b>Padding(内边距)</b> - 清除内容周围的区域，内边距是透明的。</li>
+                <li><b>Content(内容)</b> - 盒子的内容，显示文本和图像。</li>
+            </ul>
+            <p>为了正确设置元素在所有浏览器中的宽度和高度，你需要知道的盒模型是如何工作的。</p>
+            <h2>元素的宽度和高度</h2>
+            <p class="pEffect"><b>重要:</b> 当您指定一个CSS元素的宽度和高度属性时，你只是设置内容区域的宽度和高度。要知道，完全大小的元素，你还必须添加填充，边框和边距。.</p>
+            <p>下面的例子中的元素的总宽度为300px：</p>
+            <p class="pEffect">示例：</p>
+            <div class="textarea">
+                div {<br>
+                &emsp;&emsp;width: 300px;<br>
+                &emsp;&emsp;border: 25px solid green;<br>
+                &emsp;&emsp;padding: 25px;<br>
+                &emsp;&emsp;margin: 25px;<br>
+                }
+            </div>
+            <p class="pEffect">效果：</p>
+            <div class="showarea">
+                <h2>盒子模型演示</h2>
+
+                <p>CSS盒模型本质上是一个盒子，封装周围的HTML元素，它包括：边距，边框，填充，和实际内容。</p>
+
+                <div style="width: 300px;border: 25px solid lightblue;padding: 25px;margin: 25px;">这里是盒子内的实际内容。有 25px内间距，25px 外间距、25px 绿色边框。
+                </div>
+            </div>
+            <p>让我们自己算算：<br>
+                300px (宽)<br>
+                + 50px (左 + 右填充)<br>
+                + 50px (左 + 右边框)<br>
+                + 50px (左 + 右边距)<br>
+                = 450px</p>
+            <p>试想一下，你只有250像素的空间。让我们设置总宽度为250像素的元素:</p>
+            <p class="pEffect">示例：</p>
+            <div class="textarea">
+                div {<br>
+                &emsp;&emsp;width: 250px;<br>
+                &emsp;&emsp;padding: 10px;<br>
+                &emsp;&emsp;border: 5px solid gray;<br>
+                &emsp;&emsp;margin:0;<br>
+                }
+            </div>
+            <p class="pEffect">效果：</p>
+            <div class="showarea">
+                <div style="width: 250px;height: 250px;background-color: lightblue;"></div>
+                <div style="width: 250px;padding: 10px;border: 5px solid gray;margin-top:  2px;">上面的图片是250 px宽。 这个元素的总宽度也是250 px。
+                </div>
+            </div>
+            <p>最终元素的总宽度计算公式是这样的：</p>
+            <p>总元素的宽度=宽度+左填充+右填充+左边框+右边框+左边距+右边距</p>
+            <p>元素的总高度最终计算公式是这样的：</p>
+            <p>总元素的高度=高度+顶部填充+底部填充+上边框+下边框+上边距+下边距</p>
+
+            <h2>属性</h2>
+            <h3>border:</h3>
+            <p>CSS边框属性允许你指定一个元素边框的样式和颜色。</p>
+            <p class="pEffect">属性:</p>
+            <table class="table">
+                <tr>
+                    <th>属性</th>
+                    <th>描述</th>
+                </tr>
+                <tr>
+                    <td>border</td>
+                    <td>简写属性，用于把针对四个边的属性设置在一个声明。</td>
+                </tr>
+                <tr>
+                    <td>border-style</td>
+                    <td>用于设置元素所有边框的样式，或者单独地为各边设置边框样式。</td>
+                </tr>
+                <tr>
+                    <td>border-width</td>
+                    <td>简写属性，用于为元素的所有边框设置宽度，或者单独地为各边边框设置宽度。</td>
+                </tr>
+                <tr>
+                    <td>border-color</td>
+                    <td>简写属性，设置元素的所有边框中可见部分的颜色，或为 4 个边分别设置颜色。</td>
+                </tr>
+                <tr>
+                    <td>border-bottom</td>
+                    <td>简写属性，用于把下边框的所有属性设置到一个声明中。</td>
+                </tr>
+                <tr>
+                    <td>border-bottom-color</td>
+                    <td>设置元素的下边框的颜色。</td>
+                </tr>
+                <tr>
+                    <td>border-bottom-style</td>
+                    <td>设置元素的下边框的样式。</td>
+                </tr>
+                <tr>
+                    <td>border-bottom-width</td>
+                    <td>设置元素的下边框的宽度。</td>
+                </tr>
+                <tr>
+                    <td>border-left</td>
+                    <td>简写属性，用于把左边框的所有属性设置到一个声明中。</td>
+                </tr>
+                <tr>
+                    <td>border-left-color</td>
+                    <td>设置元素的左边框的颜色。</td>
+                </tr>
+                <tr>
+                    <td>border-left-style</td>
+                    <td>设置元素的左边框的样式。</td>
+                </tr>
+                <tr>
+                    <td>border-left-width</td>
+                    <td>设置元素的左边框的宽度。</td>
+                </tr>
+                <tr>
+                    <td>border-right</td>
+                    <td>简写属性，用于把右边框的所有属性设置到一个声明中。</td>
+                </tr>
+                <tr>
+                    <td>border-right-color</td>
+                    <td>设置元素的右边框的颜色。</td>
+                </tr>
+                <tr>
+                    <td>border-right-style</td>
+                    <td>设置元素的右边框的样式。</td>
+                </tr>
+                <tr>
+                    <td>border-right-width</td>
+                    <td>设置元素的右边框的宽度。</td>
+                </tr>
+                <tr>
+                    <td>border-top</td>
+                    <td>简写属性，用于把上边框的所有属性设置到一个声明中。</td>
+                </tr>
+                <tr>
+                    <td>border-top-color</td>
+                    <td>设置元素的上边框的颜色。</td>
+                </tr>
+                <tr>
+                    <td>border-top-style</td>
+                    <td>设置元素的上边框的样式。</td>
+                </tr>
+                <tr>
+                    <td>border-top-width</td>
+                    <td>设置元素的上边框的宽度。</td>
+                </tr>
+            </table>
+
+            <h3>margin:</h3>
+            <p>CSS margin(外边距)属性定义元素周围的空间。</p>
+            <p class="pEffect">属性:</p>
+            <table class="table">
+                <tr>
+                    <th>属性</th>
+                    <th>描述</th>
+                </tr>
+                <tr>
+                    <td>margin</td>
+                    <td>简写属性。在一个声明中设置所有外边距属性。</td>
+                </tr>
+                <tr>
+                    <td>margin-bottom</td>
+                    <td>设置元素的下外边距。</td>
+                </tr>
+                <tr>
+                    <td>margin-left</td>
+                    <td>设置元素的左外边距。</td>
+                </tr>
+                <tr>
+                    <td>margin-right</td>
+                    <td>设置元素的右外边距。</td>
+                </tr>
+                <tr>
+                    <td>margin-top</td>
+                    <td>设置元素的上外边距。</td>
+                </tr>
+            </table>
+
+            <h3>padding：</h3>
+            <p>CSS padding（填充）是一个简写属性，定义元素边框与元素内容之间的空间，即上下左右的内边距。</p>
+            <p class="pEffect">属性:</p>
+            <table class="table">
+                <tr>
+                    <th>属性</th>
+                    <th>说明</th>
+                </tr>
+                <tr>
+                    <td>padding</td>
+                    <td>使用简写属性设置在一个声明中的所有填充属性</td>
+                </tr>
+                <tr>
+                    <td>padding-bottom</td>
+                    <td>设置元素的底部填充</td>
+                </tr>
+                <tr>
+                    <td>padding-left</td>
+                    <td>设置元素的左部填充</td>
+                </tr>
+                <tr>
+                    <td>padding-right</td>
+                    <td>设置元素的右部填充</td>
+                </tr>
+                <tr>
+                    <td>padding-top</td>
+                    <td>设置元素的顶部填充</td>
+                </tr>
+            </table>
+
+        </div>
+
+        <!--不要再这以下写卡片的内容-->
+    </div>
+    <div class="clear"></div>
+</div>
+<div class="footer">
+    <p>made by Yueby</p>
+</div>
+</body>
+
+</html>

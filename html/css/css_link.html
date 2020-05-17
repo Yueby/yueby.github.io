@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <link rel="icon" type="image/x-ico" href="../../image/icon.png">
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/example.css">
+</head>
+
+<body>
+<div class="header">
+    <h1><a href="../../index.html">CSS</a></h1>
+</div>
+
+<input type="checkbox" id="trigger">
+
+<label for="trigger">
+    <div class="hamburger-container">
+        <span></span>
+        <span></span>
+    </div>
+</label>
+
+<div class="containerBox">
+    <div class="leftNav">
+        <ul>
+            <li><a href="css_intro.html">介绍</a></li>
+            <li><a href="css_grammer.html">语法</a></li>
+            <li><a href="css_create.html">创建</a></li>
+            <li><a href="css_selector.html">选择器</a></li>
+            <li><a href="css_background.html">背景</a></li>
+            <li><a href="css_text.html">文本</a></li>
+            <li><a href="css_font.html">字体</a></li>
+            <li><a href="css_boxmodel.html">盒子模型</a></li>
+            <li><a href="css_link.html" style="background-color: #20A3FB;color: white;border: 1px solid white;">链接</a></li>
+        </ul>
+    </div>
+
+    <div class="rightWrapper">
+
+        <div class="containerCard">
+            <h1>链接</h1>
+            <p class="intro">不同的链接可以有不同的样式。</p>
+
+            <h2>链接样式</h2>
+            <p>链接的样式，可以用任何CSS属性（如颜色，字体，背景等）。</p>
+            <p>特别的链接，可以有不同的样式，这取决于他们是什么状态。</p>
+            <p>这四个链接状态是： </p>
+            <ul>
+                <li>a:link - 正常，未访问过的链接</li>
+                <li>a:visited - 用户已访问过的链接</li>
+                <li>a:hover - 当用户鼠标放在链接上时</li>
+                <li>a:active - 链接被点击的那一刻</li>
+            </ul>
+            <p class="pEffect">示例：</p>
+            <div class="textarea">
+                a:link {color:#000000;} /* 未访问链接*/<br>
+                a:visited {color:#00FF00;} /* 已访问链接 */<br>
+                a:hover {color:#FF00FF;} /* 鼠标移动到链接上 */<br>
+                a:active {color:#0000FF;} /* 鼠标点击时 */
+            </div>
+            <p class="pEffect">效果：</p>
+            <div class="showarea">
+                <p><b><a href="/css" target="_blank" class="example-link1">这是一个链接</a></b></p>
+                <p><b>注意：</b> a:hover 必须在 a:link 和 a:visited 之后，需要严格按顺序才能看到效果。</p>
+                <p><b>注意：</b> a:active 必须在 a:hover 之后。</p>
+            </div>
+            <p>当设置为若干链路状态的样式，也有一些顺序规则：</p>
+            <ul>
+                <li>a:hover 必须跟在 a:link 和 a:visited后面</li>
+                <li>a:active 必须跟在 a:hover后面</li>
+            </ul>
+
+            <h2>常见的链接样式</h2>
+            <p>根据上述链接的颜色变化的例子，看它是在什么状态。</p>
+            <p>让我们通过一些其他常见的方式转到链接样式：</p>
+
+            <h2>文本修饰</h2>
+            <p>text-decoration 属性主要用于删除链接中的下划线：</p>
+            <p class="pEffect">示例：</p>
+            <div class="textarea">
+                a:link {text-decoration:none;}<br>
+                a:visited {text-decoration:none;}<br>
+                a:hover {text-decoration:underline;}<br>
+                a:active {text-decoration:underline;}
+            </div>
+            <p class="pEffect">效果：</p>
+            <div class="showarea">
+                <p><b><a href="/css" target="_blank" class="example-link2">This is a link</a></b></p>
+                <p><b>注意:</b> hover必须在:link和 a:visited之后定义才有效.</p>
+                <p><b>注意:</b>active必须在hover之后定义是有效的.</p>
+            </div>
+
+            <h2>背景颜色</h2>
+            <p>背景颜色属性指定链接背景色：</p>
+            <p class="pEffect">示例：</p>
+            <div class="textarea">
+                a:link {background-color:#B2FF99;}<br>
+                a:visited {background-color:#FFFF85;}<br>
+                a:hover {background-color:#FF704D;}<br>
+                a:active {background-color:#FF704D;}
+            </div>
+            <p class="pEffect">效果：</p>
+            <div class="showarea">
+                <p><b><a href="/css" target="_blank" class="example-link3">这是一个链接</a></b></p>
+                <p><b>注意:</b> hover必须在:link和 a:visited之后定义才有效.</p>
+                <p><b>注意:</b>active必须在hover之后定义是有效的.</p>
+            </div>
+            <p>链接样式的顺序记忆：<b>love and hate</b></p>
+            <p class="pEffect">l (link) ov (visited) e and h (hover) a (active) te</p>
+
+        </div>
+
+        <!--不要再这以下写卡片的内容-->
+    </div>
+    <div class="clear"></div>
+</div>
+<div class="footer">
+    <p>made by Yueby</p>
+</div>
+</body>
+
+</html>

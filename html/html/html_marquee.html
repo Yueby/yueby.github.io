@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+    <link rel="icon" type="image/x-ico" href="../../image/icon.png">
+    <link rel="stylesheet" href="../../css/main.css">
+</head>
+
+<body>
+<div class="header">
+    <h1><a href="../../index.html">HTML</a></h1>
+</div>
+
+<input type="checkbox" id="trigger">
+
+<label for="trigger">
+    <div class="hamburger-container">
+        <span></span>
+        <span></span>
+    </div>
+</label>
+
+<div class="containerBox">
+    <div class="leftNav">
+        <ul>
+            <li><a href="html_basic.html">HTML基本结构</a></li>
+            <li><a href="html_meta.html">&lt;meta&gt;标签</a></li>
+            <li><a href="html_background.html">页面背景</a></li>
+            <li><a href="html_text.html">文本相关</a></li>
+            <li><a href="html_textlayout.html">文字布局</a></li>
+            <li><a href="html_image.html">图像</a></li>
+            <li><a href="html_link.html">链接</a></li>
+            <li><a href="html_marquee.html"
+                   style="background-color: #20A3FB;color: white;border: 1px solid white;">滚动标签</a></li>
+            <li><a href="html_table.html">表格</a></li>
+            <li><a href="html_form.html">表单</a></li>
+            <li><a href="html_frameset.html">框架</a></li>
+        </ul>
+
+    </div>
+
+    <div class="rightWrapper">
+        <!--滚动标签-->
+        <div class="containerCard">
+            <h1>滚动标签</h1>
+            <h2>&lt;marquee&gt;标签</h2>
+            <p>marquee 标签用来插入一段滚动的文字。你可以使用它的属性控制当文本到达容器边缘发生的事情。</p>
+            <p class="pEffect">示例：</p>
+            <div class="textarea">
+                &lt;marquee&gt;从右向左移动&lt;/marquee&gt;
+            </div>
+            <div class="textarea">
+                &lt;marquee direction="right"&gt;从左向移动&lt;/marquee&gt;
+            </div>
+            <div class="textarea">
+                &lt;marquee behavior="alternate" scrollamount="20"&gt;左右回弹&lt;/marquee&gt;
+            </div>
+            <div class="textarea">
+                &lt;marquee behavior="alternate" onmouseover="this.stop()"
+                onmouseout="this.start()"&gt;<br>
+                &emsp;鼠标放上停止移动，离开继续移动<br>
+                &lt;/marquee&gt;
+            </div>
+
+            <p class="pEffect">效果：</p>
+            <div class="showarea">
+                <marquee>从右向左移动</marquee>
+            </div>
+            <div class="showarea">
+                <marquee direction="right">从左向移动</marquee>
+            </div>
+            <div class="showarea">
+                <marquee behavior="alternate" scrollamount="20">左右快速回弹</marquee>
+            </div>
+            <div class="showarea">
+                <marquee behavior="alternate" onmouseover="this.stop()" onmouseout="this.start()">鼠标放上停止移动，离开继续移动
+                </marquee>
+            </div>
+            <p class="pEffect">属性：</p>
+            <table class="table">
+                <tr>
+                    <th>属性</th>
+                    <th>值</th>
+                    <th>描述</th>
+                </tr>
+                <tr>
+                    <td>behavior</td>
+                    <td>scroll<br>
+                        slide<br>
+                        alternate
+                    </td>
+                    <td>设置文本在 marquee 元素内如何滚动。</td>
+                </tr>
+                <tr>
+                    <td>bgcolor</td>
+                    <td>颜色名称<br>
+                        十六进制值<br>
+                        rgb色值
+                    </td>
+                    <td>通过颜色名称或十六进制值设置背景颜色。</td>
+                </tr>
+                <tr>
+                    <td>direction</td>
+                    <td>left<br>
+                        right<br>
+                        up<br>
+                        down
+                    </td>
+                    <td>设置 marquee 内文本滚动的方向。</td>
+                </tr>
+                <tr>
+                    <td>height</td>
+                    <td><i>pixels<br>%</i></td>
+                    <td>以像素或百分比值设置高度。</td>
+                </tr>
+                <tr>
+                    <td>hspace</td>
+                    <td><i>pixels<br>%</i></td>
+                    <td>设置水平边距。</td>
+                </tr>
+                <tr>
+                    <td>loop</td>
+                    <td><i>number</i></td>
+                    <td>设置 marquee 滚动的次数。</td>
+                </tr>
+                <tr>
+                    <td>scrollamount</td>
+                    <td><i>number</i></td>
+                    <td>设置每次滚动时移动的长度（以像素为单位）。</td>
+                </tr>
+                <tr>
+                    <td>scrolldelay</td>
+                    <td><i>number</i></td>
+                    <td>设置每次滚动时的时间间隔（以毫秒为单位）。<br>请注意， 除非指定 truespeed 值，否则将忽略任何小于 60 的值，并改为使用 60。</td>
+                </tr>
+                <tr>
+                    <td>truespeed</td>
+                    <td><i>number</i></td>
+                    <td>默认情况下，会忽略小于60的scrolldelay值。如果存在truespeed，那些值不会被忽略。</td>
+                </tr>
+                <tr>
+                    <td>vspace</td>
+                    <td><i>pixels<br>%</i></td>
+                    <td>以像素或百分比值设置垂直边距。</td>
+                </tr>
+                <tr>
+                    <td>width</td>
+                    <td><i>pixels<br>%</i></td>
+                    <td>以像素或百分比值设置宽度。</td>
+                </tr>
+            </table>
+        </div>
+
+        <!--不要再这以下写卡片的内容-->
+    </div>
+    <div class="clear"></div>
+</div>
+<div class="footer">
+    <p>made by Yueby</p>
+</div>
+</body>
+
+</html>

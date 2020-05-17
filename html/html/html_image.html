@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+    <link rel="icon" type="image/x-ico" href="../../image/icon.png">
+    <link rel="stylesheet" href="../../css/main.css">
+</head>
+
+<body>
+<div class="header">
+    <h1><a href="../../index.html">HTML</a></h1>
+</div>
+
+<input type="checkbox" id="trigger">
+
+<label for="trigger">
+    <div class="hamburger-container">
+        <span></span>
+        <span></span>
+    </div>
+</label>
+
+
+<div class="containerBox">
+    <div class="leftNav">
+        <ul>
+            <li><a href="html_basic.html">HTML基本结构</a></li>
+            <li><a href="html_meta.html">&lt;meta&gt;标签</a></li>
+            <li><a href="html_background.html">页面背景</a></li>
+            <li><a href="html_text.html">文本相关</a></li>
+            <li><a href="html_textlayout.html">文字布局</a></li>
+            <li><a href="html_image.html"
+                   style="background-color: #20A3FB;color: white;border: 1px solid white;">图像</a></li>
+            <li><a href="html_link.html">链接</a></li>
+            <li><a href="html_marquee.html">滚动标签</a></li>
+            <li><a href="html_table.html">表格</a></li>
+            <li><a href="html_form.html">表单</a></li>
+            <li><a href="html_frameset.html">框架</a></li>
+        </ul>
+
+    </div>
+
+    <div class="rightWrapper">
+        <!--图像-->
+        <div class="containerCard">
+            <h1>图像</h1>
+
+            <h2>常见图片格式</h2>
+            <table class="table">
+                <tr>
+                    <th>图像类型</th>
+                    <th>优点</th>
+                    <th>缺点</th>
+                    <th>适用场合</th>
+                    <th>制作工具</th>
+                </tr>
+                <tr>
+                    <td>*.jpg</td>
+                    <td>体积小</td>
+                    <td>有损压缩 、画面失真</td>
+                    <td>网页图片</td>
+                    <td>Photoshop</td>
+                </tr>
+                <tr>
+                    <td>*.gif</td>
+                    <td>支持 Internet 标准 ,支持无损耗压缩和透明度，很流行</td>
+                    <td>支持有限的透明度,效果不如别的图像</td>
+                    <td>网页图片</td>
+                    <td>Photoshop</td>
+                </tr>
+                <tr>
+                    <td>*.swf</td>
+                    <td>体积小,便于网络传输</td>
+                    <td>制作麻烦</td>
+                    <td>网页动画</td>
+                    <td>Flash</td>
+                </tr>
+                <tr>
+                    <td>*.bmp</td>
+                    <td>支持 24 位颜色深度，兼容性好</td>
+                    <td>不支持压缩、容量大</td>
+                    <td>桌面墙纸</td>
+                    <td>Photoshop</td>
+                </tr>
+            </table>
+
+            <h2>&lt;img&gt; 标签</h2>
+            <p>&lt;img&gt; 标签定义 HTML 页面中的图像。<br>
+                &lt;img&gt; 标签有两个必需的属性：src 和 alt。
+            </p>
+            <p class="pEffect">示例：</p>
+            <div class="textarea">
+                &lt;img src="../image/头像.png" alt="Smiley face" width="42" height="42"&gt;
+            </div>
+            <p class="pEffect">效果：</p>
+            <div class="showarea">
+                <img src="../../image/头像.png" alt="头像" width="100" height="100">
+            </div>
+            <ul>
+                <li>src 属性规定显示图像的 URL。</li>
+                <li>alt 属性规定图像的替代文本。</li>
+                <li>width 属性规定图像的宽度。</li>
+                <li>height 属性规定图像的高度。</li>
+            </ul>
+
+            <h2>align 属性</h2>
+            <p class="pEffect">属性：</p>
+            <table class="table">
+                <tr>
+                    <th>值</th>
+                    <th>描述</th>
+                </tr>
+                <tr>
+                    <td>left</td>
+                    <td>左对齐内容。</td>
+                </tr>
+                <tr>
+                    <td>right</td>
+                    <td>右对齐内容。</td>
+                </tr>
+                <tr>
+                    <td>center</td>
+                    <td>居中对齐内容。</td>
+                </tr>
+                <tr>
+                    <td>justify</td>
+                    <td>对行进行伸展，这样每行都可以有相等的长度（就像在报纸和杂志中）。</td>
+                </tr>
+                <tr>
+                    <td>middle</td>
+                    <td>把图像与中央对齐。</td>
+                </tr>
+                <tr>
+                    <td>top</td>
+                    <td>把图像与顶部对齐。</td>
+                </tr>
+                <tr>
+                    <td>bottom</td>
+                    <td>把图像与底部对齐。</td>
+                </tr>
+            </table>
+            <p class="pEffect">示例：</p>
+            <div class="textarea">
+                &lt;p&gt;<br>
+                &emsp;我是一段普通的文字<br>
+                &lt;/p&gt;
+            </div>
+            <div class="textarea">
+                &lt;p align="center"&gt;<br>
+                &emsp;我是一段居中的文字<br>
+                &lt;/p&gt;
+            </div>
+            <p class="pEffect">效果：</p>
+            <div class="showarea">
+                <p>
+                    我是一段普通的文字
+                </p>
+            </div>
+            <div class="showarea">
+                <p align="center">
+                    我是一段居中的文字
+                </p>
+            </div>
+            <p>可以看见，上面示例文字已被居中显示。</p>
+            <p class="pEffect">示例：</p>
+            <div class="textarea">
+                &lt;p&gt;<br>
+                &emsp;&lt;img src="../image/头像.png" alt="头像" width="50" height="50"&gt;一段普通的文字<br>
+                &lt;p&gt;
+            </div>
+            <div class="textarea">
+                &lt;p&gt;<br>
+                &emsp;&lt;img src="../image/头像.png" alt="头像" width="50" height="50"
+                align="middle"&gt;一段普通的文字<br>
+                &lt;p&gt;
+            </div>
+            <p class="pEffect">效果：</p>
+            <div class="showarea">
+                <p>
+                    <img src="../../image/头像.png" alt="头像" width="50" height="50"/>一段普通的文字
+                </p>
+            </div>
+            <div class="showarea">
+                <p>
+                    <img src="../../image/头像.png" alt="头像" width="50" height="50" align="middle"/>一段普通的文字
+                </p>
+            </div>
+            <p>上面所示图片与文字的排列发生了改变。</p>
+            <ul>
+                <li>align 属性规定了图像相对于周围元素的对齐方式。</li>
+            </ul>
+        </div>
+
+
+        <!--不要再这以下写卡片的内容-->
+    </div>
+    <div class="clear"></div>
+</div>
+<div class="footer">
+    <p>made by Yueby</p>
+</div>
+</body>
+
+</html>

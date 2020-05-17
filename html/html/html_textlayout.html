@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+    <link rel="icon" type="image/x-ico" href="../../image/icon.png">
+    <link rel="stylesheet" href="../../css/main.css">
+</head>
+
+<body>
+
+<div class="header">
+    <h1><a href="../../index.html">HTML</a></h1>
+</div>
+
+<input type="checkbox" id="trigger">
+
+<label for="trigger">
+    <div class="hamburger-container">
+        <span></span>
+        <span></span>
+    </div>
+</label>
+
+<div class="containerBox">
+    <div class="leftNav">
+        <ul>
+            <li><a href="html_basic.html">HTML基本结构</a></li>
+            <li><a href="html_meta.html">&lt;meta&gt;标签</a></li>
+            <li><a href="html_background.html">页面背景</a></li>
+            <li><a href="html_text.html">文本相关</a></li>
+            <li><a href="html_textlayout.html"
+                   style="background-color: #20A3FB;color: white;border: 1px solid white;">文字布局</a></li>
+            <li><a href="html_image.html">图像</a></li>
+            <li><a href="html_link.html">链接</a></li>
+            <li><a href="html_marquee.html">滚动标签</a></li>
+            <li><a href="html_table.html">表格</a></li>
+            <li><a href="html_form.html">表单</a></li>
+            <li><a href="html_frameset.html">框架</a></li>
+        </ul>
+
+    </div>
+
+    <div class="rightWrapper">
+        <!--文本布局-->
+        <a name="textlayout"></a>
+        <div class="containerCard">
+            <h1>文字布局</h1>
+
+            <h2>&lt;hr&gt; 标签</h2>
+            <p class="pEffect">示例：</p>
+            <div class="textarea">
+                我是一段文字&lt;hr&gt;我是一段文字
+            </div>
+            <div class="textarea">
+                我是一段文字&lt;hr size="5" color="red" width="300"&gt;我是一段文字
+            </div>
+            <p class="pEffect">效果：</p>
+            <div class="showarea">
+                我是一段文字
+                <hr>
+                我是一段文字
+            </div>
+            <div class="showarea">
+                我是一段文字
+                <hr size="5" color="red" width="300">
+                我是一段文字
+            </div>
+            <ul>
+                <li>&lt;hr&gt; 标签定义 HTML 页面中的主题变化（比如话题的转移），并显示为一条水平线。</li>
+                <li>&lt;hr&gt; 元素被用来分隔 HTML 页面中的内容（或者定义一个变化）。</li>
+            </ul>
+            <p class="pEffect">属性：</p>
+            <table class="table">
+                <tr>
+                    <th>属性</th>
+                    <th>值</th>
+                    <th>描述</th>
+                </tr>
+                <tr>
+                    <td>align</td>
+                    <td>left<br>
+                        center<br>
+                        right
+                    </td>
+                    <td>规定 &lt;hr&gt; 元素的对齐方式</td>
+                </tr>
+                <tr>
+                    <td>noshade</td>
+                    <td>noshade</td>
+                    <td>规定 &lt;hr&gt; 元素的颜色呈现为纯色。</td>
+                </tr>
+                <tr>
+                    <td>size</td>
+                    <td><i>pixels</i></td>
+                    <td>规定 &lt;hr&gt; 元素的高度。</td>
+                </tr>
+                <tr>
+                    <td>width</td>
+                    <td><i>pixels<br>%</i></td>
+                    <td>规定 &lt;hr&gt; 元素的宽度。</td>
+                </tr>
+            </table>
+
+            <h2>列表</h2>
+            <h3>无序列表</h3>
+            <p class="pEffect">示例：</p>
+            <div class="textarea">
+                &lt;ul&gt;<br>
+                &emsp;&lt;li&gt;Coffee&lt;/li&gt;<br>
+                &emsp;&lt;li>Tea&lt;/li&gt;<br>
+                &emsp;&lt;li>Milk&lt;/li&gt;<br>
+                &lt;/ul&gt;
+            </div>
+            <p class="pEffect">效果：</p>
+            <div class="showarea">
+                <ul>
+                    <li style="color: black;">Coffee</li>
+                    <li>Tea</li>
+                    <li>Milk</li>
+                </ul>
+            </div>
+            <ul>
+                <li>无序列表是一个项目的列表，此列项目使用粗体圆点（典型的小黑圆圈）进行标记。</li>
+                <li>无序列表使用 &lt;ul&gt; 标签</li>
+            </ul>
+            <p class="pEffect">属性：</p>
+            <table class="table">
+                <tr>
+                    <th>属性</th>
+                    <th>值</th>
+                    <th>描述</th>
+                </tr>
+                <tr>
+                    <td>compact</td>
+                    <td>compact</td>
+                    <td>规定列表呈现的效果比正常情况更小巧。</td>
+                </tr>
+                <tr>
+                    <td>type</td>
+                    <td>disc<br>
+                        square<br>
+                        circle
+                    </td>
+                    <td>规定列表的项目符号的类型。</td>
+                </tr>
+            </table>
+
+            <h3>有序列表</h3>
+            <p class="pEffect">示例：</p>
+            <div class="textarea">
+                &lt;ol&gt;<br>
+                &emsp;&lt;li type="1"&gt;Coffee &lt;/li&gt;<br>
+                &emsp;&lt;li&gt;Tea &lt;/li&gt;<br>
+                &emsp;&lt;li&gt;Milk &lt;/li&gt;<br>
+                &lt;/ol&gt;
+            </div>
+            <p class="pEffect">效果：</p>
+            <div class="showarea">
+                <ol type="1">
+                    <li>Coffee</li>
+                    <li>Tea</li>
+                    <li>Milk</li>
+                </ol>
+            </div>
+            <ul>
+                <li>同样，有序列表也是一列项目，列表项目使用数字进行标记。 有序列表始于 &lt;ol&gt; 标签。每个列表项始于 &lt;li&gt; 标签。</li>
+                <li>列表项使用数字来标记。</li>
+            </ul>
+            <p class="pEffect">属性：</p>
+            <table class="table">
+                <tr>
+                    <th>属性</th>
+                    <th>值</th>
+                    <th>描述</th>
+                </tr>
+                <tr>
+                    <td>compact</td>
+                    <td>compact</td>
+                    <td>规定列表呈现的效果比正常情况更小巧。</td>
+                </tr>
+                <tr>
+                    <td>reversed
+                    </td>
+                    <td>reversed</td>
+                    <td>指定列表倒序(9,8,7...)</td>
+                </tr>
+                <tr>
+                    <td>start</td>
+                    <td><i>number</i></td>
+                    <td>规定列表中的起始点。</td>
+                </tr>
+                <tr>
+                    <td>type</td>
+                    <td>1<br>
+                        A<br>
+                        a<br>
+                        I<br>
+                        i
+                    </td>
+                    <td>规定列表的类型。</td>
+                </tr>
+            </table>
+
+            <h3>自定义列表</h3>
+            <p class="pEffect">示例：</p>
+            <div class="textarea">
+                &lt;dl&gt;<br>
+                &emsp;&lt;dt&gt;Coffee&lt;/dt&gt;<br>
+                &emsp;&lt;dd&gt;- black hot drink&lt;/dd&gt;<br>
+                &emsp;&lt;dt&gt;Milk&lt;/dt&gt;<br>
+                &emsp;&lt;dd&gt;- white cold drink&lt;/dd&gt;<br>
+                &lt;/dl&gt;
+            </div>
+            <p class="pEffect">效果：</p>
+            <div class="showarea">
+                <dl>
+                    <dt>Coffee</dt>
+                    <dd>- black hot drink</dd>
+                    <dt>Milk</dt>
+                    <dd>- white cold drink</dd>
+                </dl>
+            </div>
+            <ul>
+                <li>自定义列表不仅仅是一列项目，而是项目及其注释的组合。</li>
+                <li>自定义列表以 &lt;dl&gt; 标签开始。每个自定义列表项以 &lt;dt&gt; 开始。每个自定义列表项的定义以 &lt;dd&gt; 开始。</li>
+            </ul>
+
+            <h3>&lt;pre&gt; 标签</h3>
+            <ul>
+                <li>&lt;pre&gt; 标签可定义预格式化的文本。</li>
+                <li>被包围在 &lt;pre&gt; 标签 元素中的文本通常会保留空格和换行符。而文本也会呈现为等宽字体。</li>
+            </ul>
+            <p class="pEffect">示例：</p>
+            <div class="textarea">
+                &lt;pre&gt;此例演示如何使用 pre 标签<br>
+                对空行和&emsp;&emsp;空格<br>
+                进行控制<br>&lt;/pre&gt;
+            </div>
+            <p class="pEffect">效果：</p>
+            <div class="showarea">
+                    <pre>此例演示如何使用 pre 标签
+对空行和    空格
+进行控制</pre>
+            </div>
+
+        </div>
+
+        <!--不要再这以下写卡片的内容-->
+    </div>
+    <div class="clear"></div>
+</div>
+<div class="footer">
+    <p>made by Yueby</p>
+</div>
+</body>
+
+</html>

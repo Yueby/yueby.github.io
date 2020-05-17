@@ -1,0 +1,77 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: '微软雅黑', sans-serif;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+}
+
+.login-container {
+    height: 100%;
+}
+
+.login-wrapper {
+    background-color: #fff;
+    width: 400px;
+    height: 600px;
+    position: relative;
+    padding: 40px;
+    /* margin: 100px auto; */
+    left: 50%;
+    top: 30%;
+    border-radius: 15px;
+    transform: translate(-50%, -30%);
+    letter-spacing: .05em;
+}
+
+.login-wrapper .login-header {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 200px;
+}
+
+.login-wrapper .form_wrapper .input-item {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    border: 0;
+    padding: 10px;
+    border-bottom: 2px solid rgb(128, 125, 125);
+    font-size: 15px;
+    outline: none;
+}
+
+.login-wrapper .form_wrapper .btn {
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    margin-top: 40px;
+    background-color: #20A3FB;
+    color: #fff;
+    border-radius: 5px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+}
+
+.login-wrapper .form_wrapper .btn a {
+    text-decoration-line: none;
+    color: #fff;
+}
+
+.login-wrapper .msg {
+    text-align: center;
+    line-height: 80px;
+}
+
+.login-wrapper .msg a {
+    text-decoration-line: none;
+    color: #20A3FB;
+}

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+    <link rel="icon" type="image/x-ico" href="../../image/icon.png">
+    <link rel="stylesheet" href="../../css/main.css">
+</head>
+
+<body>
+
+<div class="header">
+    <h1><a href="../../index.html">HTML</a></h1>
+</div>
+
+<input type="checkbox" id="trigger">
+
+<label for="trigger">
+    <div class="hamburger-container">
+        <span></span>
+        <span></span>
+    </div>
+</label>
+
+<div class="containerBox">
+    <div class="leftNav">
+        <ul>
+            <li><a href="html_basic.html">HTML基本结构</a></li>
+            <li><a href="html_meta.html">&lt;meta&gt;标签</a></li>
+            <li><a href="html_background.html">页面背景</a></li>
+            <li><a href="html_text.html"
+                   style="background-color: #20A3FB;color: white;border: 1px solid white;">文本相关</a></li>
+            <li><a href="html_textlayout.html">文字布局</a></li>
+            <li><a href="html_image.html">图像</a></li>
+            <li><a href="html_link.html">链接</a></li>
+            <li><a href="html_marquee.html">滚动标签</a></li>
+            <li><a href="html_table.html">表格</a></li>
+            <li><a href="html_form.html">表单</a></li>
+            <li><a href="html_frameset.html">框架</a></li>
+        </ul>
+
+    </div>
+
+    <div class="rightWrapper">
+        <!--文本-->
+        <a name="text"></a>
+        <div class="containerCard">
+            <h1>文本相关</h1>
+
+            <h2>标题标签</h2>
+            <p>标题标签由 &lt;h1&gt; 到 &lt;h6&gt; ，大小由 h1 开始到 h6 越来越小。</p>
+            <p class="pEffect">示例：</p>
+            <div class="textarea">
+                &lt;body&gt;<br>
+                &emsp;&lt;h1&gt;这是一个一级标题&lt;/h1&gt;<br>
+                &lt;/body&gt;
+            </div>
+            <div class="textarea">
+                <h1 style="border: 0;color: black;">这是h1标题</h1>
+                <h2 style="margin: 20px 0;border: 0;">这是h2标题</h2>
+                <h3 style="margin: 20px 0;border: 0;">这是h3标题</h3>
+                <h4>这是h4标题</h4>
+                <h5>这是h5标题</h5>
+                <h6>这是h6标题</h6>
+            </div>
+
+            <h2>字体标签 &lt;font&gt;</h2>
+            <p>font 标签可以设置 font 标签内的文字样式</p>
+            <p class="pEffect">示例：</p>
+            <div class="textarea">
+                &lt;font&gt;<br>
+                &emsp;&lt;p&gt;我是一段文字&lt;/p&gt;<br>
+                &lt;/font&gt;
+            </div>
+            <ul>
+                <li>HTML5 不支持 &lt;font&gt; 标签。</li>
+                <li>在 HTML 4.01 中，&lt;font&gt; 元素已废弃</li>
+                <li>&lt;font&gt; 标签规定文本的字体、字体尺寸、字体颜色。</li>
+            </ul>
+            <div class="textarea">
+                我是一段普通的文字<br>
+                <font color="red">我是一段红色的文字</font><br>
+                <font face="隶书">我是一段隶书字体文字</font><br>
+                <font size="6">我是一段文字大小为6的文字</font>
+            </div>
+            <p>上面的代码如下：</p>
+            <div class="textarea">
+                &lt;p&gt;<br>
+                &emsp;我是一段普通的文字&lt;br&gt;<br>
+                &emsp;&lt;font color="red"&gt;我是一段红色的文字&lt;/font&gt;&lt;br&gt;<br>
+                &emsp;&lt;font face="隶书"&gt;我是一段隶书字体文字&lt;/font&gt;&lt;br&gt;<br>
+                &emsp;&lt;font size="6"&gt;我是一段文字大小为6的文字&lt/font&gt;<br>
+                &lt;/p&gt;
+            </div>
+            <ul>
+                <li>color属性规定文本的颜色。</li>
+                <li>face属性规定文本的字体。</li>
+                <li>size属性规定文本的尺寸。</li>
+            </ul>
+
+            <h2>特殊符号</h2>
+            <table class="table">
+                <tr>
+                    <th>特殊字符</th>
+                    <th>转义码</th>
+                </tr>
+                <tr>
+                    <td>空格</td>
+                    <td>&amp;nbsp;</td>
+                </tr>
+                <tr>
+                    <td>引号(&quot;&quot;)</td>
+                    <td>&amp;quot;</td>
+                </tr>
+                <tr>
+                    <td>小于(&lt;)</td>
+                    <td>&amp;lt;</td>
+                </tr>
+                <tr>
+                    <td>大于(&gt;)</td>
+                    <td>&amp;gt;</td>
+                </tr>
+                <tr>
+                    <td>版权号(&copy;)</td>
+                    <td>&amp;copy;</td>
+                </tr>
+            </table>
+            <p>尖括号和引号之类的特殊符号想要在html网页中显示的话，为了避免一些不必要的错误，我们可以使用转义码来显示。</p>
+
+            <h2>段落标签 &lt;p&gt; </h2>
+            <p class="pEffect">示例：</p>
+            <div class="textarea">
+                &lt;p&gt;这是一段加了p标签的文字&lt;/p&gt;
+            </div>
+            <p class="pEffect">效果：</p>
+            <div class="showarea">
+                这是一段普通的文字
+            </div>
+            <div class="showarea">
+                <p>这是一段加了p标签的文字</p>
+            </div>
+            <p>可以很明显的看到，加了 p 标签和没加 p 标签的区别</p>
+            <ul>
+                <li>&lt;p&gt; 标签定义段落。</li>
+                <li>&lt;p&gt; 元素会自动在其前后创建一些空白。浏览器会自动添加这些空间，您也可以在样式表中规定。</li>
+            </ul>
+
+            <h2>换行标签 &lt;br&gt; </h2>
+            <p class="pEffect">示例：</p>
+            <div class="textarea">
+                &lt;p&gt;<br>
+                &emsp;我是一段文字&lt;br&gt;<br>
+                &emsp;我是另一段文字&lt;br&gt;<br>
+                &lt;/p&gt;
+            </div>
+        </div>
+
+        <!--不要再这以下写卡片的内容-->
+    </div>
+    <div class="clear"></div>
+</div>
+<div class="footer">
+    <p>made by Yueby</p>
+</div>
+</body>
+
+</html>

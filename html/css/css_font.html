@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <link rel="icon" type="image/x-ico" href="../../image/icon.png">
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/example.css">
+</head>
+
+<body>
+<div class="header">
+    <h1><a href="../../index.html">CSS</a></h1>
+</div>
+
+<input type="checkbox" id="trigger">
+
+<label for="trigger">
+    <div class="hamburger-container">
+        <span></span>
+        <span></span>
+    </div>
+</label>
+
+<div class="containerBox">
+    <div class="leftNav">
+        <ul>
+            <li><a href="css_intro.html">介绍</a></li>
+            <li><a href="css_grammer.html">语法</a></li>
+            <li><a href="css_create.html">创建</a></li>
+            <li><a href="css_selector.html">选择器</a></li>
+            <li><a href="css_background.html">背景</a></li>
+            <li><a href="css_text.html">文本</a></li>
+            <li><a href="css_font.html" style="background-color: #20A3FB;color: white;border: 1px solid white;">字体</a></li>
+            <li><a href="css_boxmodel.html">盒子模型</a></li>
+            <li><a href="css_link.html">链接</a></li>
+        </ul>
+    </div>
+
+    <div class="rightWrapper">
+
+        <div class="containerCard">
+            <h1>字体</h1>
+            <p>CSS字体属性定义字体，加粗，大小，文字样式。</p>
+            <h2>CSS字型</h2>
+            <p>在CSS中，有两种类型的字体系列名称：</p>
+            <ul>
+                <li>
+                    <b>通用字体系列</b> - 拥有相似外观的字体系统组合（如 "Serif" 或 "Monospace"）
+                </li>
+                <li>
+                    <b>特定字体系列</b> - 一个特定的字体系列（如 "Times" 或 "Courier"）
+                </li>
+            </ul>
+            <table class="table" style="text-align: left;">
+                <tr>
+                    <th>Generic family</th>
+                    <th>字体系列</th>
+                    <th>说明</th>
+                </tr>
+                <tr>
+                    <td>Serif</td>
+                    <td><span style="font-size:150%;font-family:Times New Roman">Times New Roman</span><br>
+                        <span style="font-size:150%;font-family:Georgia">Georgia</span></td>
+                    <td>Serif字体中字符在行的末端拥有额外的装饰</td>
+                </tr>
+                <tr>
+                    <td>Sans-serif</td>
+                    <td><span style="font-size:150%;font-family:Arial">Arial</span><br>
+                        <span style="font-size:150%;font-family:Verdana">Verdana</span></td>
+                    <td>"Sans"是指无 - 这些字体在末端没有额外的装饰</td>
+                </tr>
+                <tr>
+                    <td>Monospace</td>
+                    <td><span style="font-size:150%;font-family:Courier New">Courier New</span><br>
+                        <span style="font-size:150%;font-family:Lucida Console">Lucida Console</span></td>
+                    <td>所有的等宽字符具有相同的宽度</td>
+                </tr>
+            </table>
+
+            <h2>字体系列</h2>
+            <p> font-family 属性设置文本的字体系列。</p>
+            <p> font-family 属性应该设置几个字体名称作为一种"后备"机制，如果浏览器不支持第一种字体，他将尝试下一种字体。</p>
+            <p class="pEffect"><b>注意</b>: 如果字体系列的名称超过一个字，它必须用引号，如Font Family："宋体"。</p>
+            <p>多个字体系列是用一个逗号分隔指明：</p>
+            <p class="pEffect">示例：</p>
+            <div class="textarea">
+                p.serif{font-family:"Times New Roman",Times,serif;}<br>
+                p.sansserif{font-family:Arial,Helvetica,sans-serif;}
+            </div>
+            <p class="pEffect">效果：</p>
+            <div class="showarea">
+                <h1>CSS font-family</h1>
+                <p class="serif">这一段的字体是 Times New Roman </p>
+                <p class="sansserif">这一段的字体是 Arial.</p>
+            </div>
+
+            <h2>字体样式</h2>
+            <p>主要是用于指定斜体文字的字体样式属性。</p>
+            <p>这个属性有三个值：</p>
+            <ul>
+                <li>正常 - 正常显示文本</li>
+                <li>斜体 - 以斜体字显示的文字</li>
+                <li>倾斜的文字 - 文字向一边倾斜（和斜体非常类似，但不太支持）</li>
+            </ul>
+            <p class="pEffect">示例：</p>
+            <div class="textarea">
+                p.normal {font-style:normal;}<br>
+                p.italic {font-style:italic;}<br>
+                p.oblique {font-style:oblique;}
+            </div>
+            <p class="pEffect">效果：</p>
+            <div class="showarea">
+                <p class="normal">这是一个段落,正常。</p>
+                <p class="italic">这是一个段落,斜体。</p>
+                <p class="oblique">这是一个段落,斜体。</p>
+            </div>
+            <h2>字体大小</h2>
+            <p>font-size 属性设置文本的大小。</p>
+            <p>能否管理文字的大小，在网页设计中是非常重要的。但是，你不能通过调整字体大小使段落看上去像标题，或者使标题看上去像段落。</p>
+            <p>请务必使用正确的HTML标签，就&lt;h1&gt; - &lt;h6&gt;表示标题和&lt;p&gt;表示段落： </p>
+            <p>字体大小的值可以是绝对或相对的大小。</p>
+            <p>绝对大小：</p>
+            <ul>
+                <li>设置一个指定大小的文本</li>
+                <li>不允许用户在所有浏览器中改变文本大小</li>
+                <li>确定了输出的物理尺寸时绝对大小很有用</li>
+            </ul>
+            <p>相对大小：</p>
+            <ul>
+                <li>相对于周围的元素来设置大小</li>
+                <li>允许用户在浏览器中改变文字大小</li>
+            </ul>
+            <p class="pEffect"><strong>注意：</strong> 如果你不指定一个字体的大小，默认大小和普通文本段落一样，是16像素（16px=1em）。</p>
+            <h2>设置字体大小像素</h2>
+            <p>设置文字的大小与像素，让您完全控制文字大小：</p>
+            <p class="pEffect">示例：</p>
+            <div class="textarea">
+                h1 {font-size:40px;}<br>
+                h2 {font-size:30px;}<br>
+                p {font-size:14px;}
+            </div>
+            <p class="pEffect">效果：</p>
+            <div class="showarea">
+                <h1 style="font-size:40px;">This is heading 1</h1>
+                <h2 style="font-size:30px;">This is heading 2</h2>
+                <p style="font-size:14px;">This is a paragraph.</p>
+                <p style="font-size:14px;">允许在 Internet Explorer 9, Firefox, Chrome, Opera, 和 Safari 中通过缩放浏览器调整文本大小。</p>
+                <p style="font-size:14px;"><b>注意:</b>这个例子在 IE9之前的版本不工作, prior version 9.</p>
+            </div>
+            <p>上面的例子可以在 Internet Explorer 9, Firefox, Chrome, Opera, 和 Safari 中通过缩放浏览器调整文本大小。</p>
+            <p>虽然可以通过浏览器的缩放工具调整文本大小，但是，这种调整是整个页面，而不仅仅是文本</p>
+
+            <h2>用em来设置字体大小</h2>
+            <p>为了避免Internet Explorer 中无法调整文本的问题，许多开发者使用 em 单位代替像素。</p>
+            <p>em的尺寸单位由W3C建议。</p>
+            <p>1em和当前字体大小相等。在浏览器中默认的文字大小是16px。</p>
+            <p>因此，1em的默认大小是16px。可以通过下面这个公式将像素转换为em：<span class="pEffect">px/16=em</span></p>
+            <p class="pEffect">示例：</p>
+            <div class="textarea">
+                h1 {font-size:2.5em;} /* 40px/16=2.5em */<br>
+                h2 {font-size:1.875em;} /* 30px/16=1.875em */<br>
+                p {font-size:0.875em;} /* 14px/16=0.875em */
+            </div>
+            <p class="pEffect">效果：</p>
+            <div class="showarea">
+                <h1 style="font-size:2.5em;">This is heading 1</h1>
+                <h2 style="font-size:1.875em;">This is heading 2</h2>
+                <p style="font-size:0.875em;">This is a paragraph.</p>
+                <p style="font-size:0.875em;">使用 em 单位，允许在所有浏览器中调整文本大小。 不幸的是，仍然是IE浏览器的问题。调整文本的大小时，会比正常的尺寸更大或更小。
+            </div>
+            <p>在上面的例子，em的文字大小是与前面的例子中像素一样。不过，如果使用 em 单位，则可以在所有浏览器中调整文本大小。</p>
+            <p>不幸的是，仍然是IE浏览器的问题。调整文本的大小时，会比正常的尺寸更大或更小。</p>
+
+            <h2>使用百分比和EM组合</h2>
+            <p>在所有浏览器的解决方案中，设置 &lt;body&gt;元素的默认字体大小的是百分比： </p>
+            <p class="pEffect">示例：</p>
+            <div class="textarea">
+                body {font-size:100%;}<br>
+                h1 {font-size:2.5em;}<br>
+                h2 {font-size:1.875em;}<br>
+                p {font-size:0.875em;}
+            </div>
+            <p class="pEffect">效果：</p>
+            <div class="showarea" style="font-size: 100%;">
+                <h1 style="font-size: 2.5em;">This is heading 1</h1>
+                <h2 style="font-size:1.875em;">This is heading 2</h2>
+                <p style="font-size:0.875em;">This is a paragraph.</p>
+                <p style="font-size:0.875em;">在所有浏览器中，可以显示相同的文本大小，并允许所有浏览器缩放文本的大小。</p>
+            </div>
+            <p>我们的代码非常有效。在所有浏览器中，可以显示相同的文本大小，并允许所有浏览器缩放文本的大小。</p>
+            <p class="pEffect">属性：</p>
+            <table class="table">
+                <tr>
+                    <th>Property</th>
+                    <th>描述</th>
+                </tr>
+                <tr>
+                    <td>font</td>
+                    <td>在一个声明中设置所有的字体属性</td>
+                </tr>
+                <tr>
+                    <td>font-family</td>
+                    <td>指定文本的字体系列</td>
+                </tr>
+                <tr>
+                    <td>font-size</td>
+                    <td>指定文本的字体大小</td>
+                </tr>
+                <tr>
+                    <td>font-style</td>
+                    <td>指定文本的字体样式</td>
+                </tr>
+                <tr>
+                    <td>font-variant</td>
+                    <td>以小型大写字体或者正常字体显示文本。</td>
+                </tr>
+                <tr>
+                    <td>font-weight</td>
+                    <td>指定字体的粗细。</td>
+                </tr>
+            </table>
+
+        </div>
+
+        <!--不要再这以下写卡片的内容-->
+    </div>
+    <div class="clear"></div>
+</div>
+<div class="footer">
+    <p>made by Yueby</p>
+</div>
+</body>
+
+</html>

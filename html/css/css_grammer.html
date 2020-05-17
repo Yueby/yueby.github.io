@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <link rel="icon" type="image/x-ico" href="../../image/icon.png">
+    <link rel="stylesheet" href="../../css/main.css">
+</head>
+
+<body>
+<div class="header">
+    <h1><a href="../../index.html">CSS</a></h1>
+</div>
+
+<input type="checkbox" id="trigger">
+
+<label for="trigger">
+    <div class="hamburger-container">
+        <span></span>
+        <span></span>
+    </div>
+</label>
+
+<div class="containerBox">
+    <div class="leftNav">
+        <ul>
+            <li><a href="css_intro.html">介绍</a></li>
+            <li><a href="css_grammer.html" style="background-color: #20A3FB;color: white;border: 1px solid white;">语法</a></li>
+            <li><a href="css_create.html">创建</a></li>
+            <li><a href="css_selector.html">选择器</a></li>
+            <li><a href="css_background.html">背景</a></li>
+            <li><a href="css_text.html">文本</a></li>
+            <li><a href="css_font.html">字体</a></li>
+            <li><a href="css_boxmodel.html">盒子模型</a></li>
+            <li><a href="css_link.html">链接</a></li>
+        </ul>
+    </div>
+
+    <div class="rightWrapper">
+
+        <div class="containerCard">
+            <h1>语法</h1>
+            <h2>CSS 构成</h2>
+            <p>CSS 规则由两个主要的部分构成：选择器，以及一条或多条声明:</p>
+            <p class="pEffect"> h1 </p>
+            <span class="pEffect">{ color:blue; font-size:12px; }</span>
+            <ul>
+                <li>选择器：h1</li>
+                <li>属性：color</li>
+                <li>值：blue</li>
+            </ul>
+            <p>选择器通常是您需要改变样式的 HTML 元素。</p>
+            <p>每条声明由一个属性和一个值组成。</p>
+            <p>属性（property）是您希望设置的样式属性（style attribute）。每个属性有一个值。属性和值被冒号分开。</p>
+            <p>CSS声明总是以分号(;)结束，声明总以大括号({})括起来:</p>
+            <p class="pEffect">示例：</p>
+            <div class="textarea">
+                p {color:red;text-align:center;}
+            </div>
+            <p>为了让CSS可读性更强，你可以每行只描述一个属性:</p>
+            <p class="pEffect">示例：</p>
+            <div class="textarea">
+                p<br>
+                {<br>
+                color: red;<br>
+                text-align: center;<br>
+                }
+            </div>
+            <p class="pEffect">效果：</p>
+            <div class="showarea">
+                <p style="color:red;text-align: center;">
+                    Hello World!<br>
+                    这是一段应用了CSS样式的段落！
+                </p>
+            </div>
+            <h2>CSS 注释</h2>
+            <p>注释是用来解释你的代码，并且可以随意编辑它，浏览器会忽略它。</p>
+            <p>CSS注释以 "/*" 开始, 以 "*/" 结束, 实例如下:</p>
+            <p class="pEffect">示例：</p>
+            <div class="textarea">
+                /*这是个注释*/<br>
+                p<br>
+                {<br>
+                text-align:center;<br>
+                /*这是另一个注释*/<br>
+                color:black;<br>
+                font-family:arial;<br>
+                }
+            </div>
+        </div>
+
+        <!--不要再这以下写卡片的内容-->
+    </div>
+    <div class="clear"></div>
+</div>
+<div class="footer">
+    <p>made by Yueby</p>
+</div>
+</body>
+
+</html>

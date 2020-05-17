@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <link rel="icon" type="image/x-ico" href="../../image/icon.png">
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/example.css">
+</head>
+
+<body>
+<div class="header">
+    <h1><a href="../../index.html">CSS</a></h1>
+</div>
+
+<input type="checkbox" id="trigger">
+
+<label for="trigger">
+    <div class="hamburger-container">
+        <span></span>
+        <span></span>
+    </div>
+</label>
+
+<div class="containerBox">
+    <div class="leftNav">
+        <ul>
+            <li><a href="css_intro.html">介绍</a></li>
+            <li><a href="css_grammer.html">语法</a></li>
+            <li><a href="css_create.html">创建</a></li>
+            <li><a href="css_selector.html" style="background-color: #20A3FB;color: white;border: 1px solid white;">选择器</a></li>
+            <li><a href="css_background.html">背景</a></li>
+            <li><a href="css_text.html">文本</a></li>
+            <li><a href="css_font.html">字体</a></li>
+            <li><a href="css_boxmodel.html">盒子模型</a></li>
+            <li><a href="css_link.html">链接</a></li>
+        </ul>
+    </div>
+
+    <div class="rightWrapper">
+
+        <div class="containerCard">
+            <h1>选择器</h1>
+            <h2>id 和 class选择器</h2>
+            <p>如果你要在HTML元素中设置CSS样式，你需要在元素中设置"id" 和 "class"选择器。</p>
+            <h3>id 选择器</h3>
+            <p>id 选择器可以为标有特定 id 的 HTML 元素指定特定的样式。</p>
+            <p>HTML元素以id属性来设置id选择器,CSS 中 id 选择器以 "#" 来定义。</p>
+            <p>以下的样式规则应用于元素属性 id="para1":</p>
+            <p class="pEffect">示例：</p>
+            <div class="textarea">
+                #para1<br>
+                {<br>
+                &emsp;&emsp;text-align:center;<br>
+                &emsp;&emsp;color:red;<br>
+                }
+            </div>
+            <p class="pEffect"><strong>注意：</strong>ID属性不要以数字开头，数字开头的ID在 Mozilla/Firefox 浏览器中不起作用。</p>
+            <h3>class 选择器</h3>
+            <p>class 选择器用于描述一组元素的样式，class 选择器有别于id选择器，class可以在多个元素中使用。 </p>
+            <p>class 选择器在HTML中以class属性表示, 在 CSS 中，类选择器以一个点"."号显示：</p>
+            <p>在以下的例子中，所有拥有 center 类的 HTML 元素均为居中。</p>
+            <p class="pEffect">示例：</p>
+            <div class="textarea">
+                .center {text-align:center;}
+            </div>
+            <div class="textarea">
+                &lt;h1 class="center"&gt;标题居中&lt;/h1&gt;<br>
+                &lt;p class="center"&gt;段落居中。&lt;/p&gt;
+            </div>
+            <p class="pEffect">效果：</p>
+            <div class="showarea">
+                <h1 class="center" style="text-align:center;">标题居中</h1>
+                <p class="center" style="text-align:center;">段落居中。</p>
+            </div>
+            <p>你也可以指定特定的HTML元素使用class。</p>
+            <p>在以下示例中, 所有的 p 元素使用 class="center" 让该元素的文本居中:</p>
+            <p class="pEffect">示例：</p>
+            <div class="textarea">
+                p.center {text-align:center;}
+            </div>
+            <div class="textarea">
+                &lt;h1 class="center"&gt;这个标题不受影响&lt;/h1&gt;<br>
+                &lt;p class="center" style="text-align: center;"&gt;这个段落居中对齐。&lt;/p&gt;
+            </div>
+            <p class="pEffect">效果：</p>
+            <div class="showarea">
+                <h1 class="center" style="color:black;border:0;margin: 0;">这个标题不受影响</h1>
+                <p class="center" style="text-align: center;">这个段落居中对齐。</p>
+            </div>
+            <p class="pEffect"><strong>注意：</strong> 类名的第一个字符不能使用数字！它无法在 Mozilla 或 Firefox 中起作用。</p>
+        </div>
+
+        <!--不要再这以下写卡片的内容-->
+    </div>
+    <div class="clear"></div>
+</div>
+<div class="footer">
+    <p>made by Yueby</p>
+</div>
+</body>
+
+</html>
