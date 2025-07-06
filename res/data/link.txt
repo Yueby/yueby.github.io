@@ -1,2 +1,2 @@
 https://liangxin.xyz/api/v1/liangxin?OwO=7061d8d08f70e8e10012038309dbb1f7
-https://fn3.170809.xyz/api/v1/client/subscribe?token=5f75be18d52921a6238d7aec356e9185
+https://fn1.fnxx.cc/api/v1/client/subscribe?token=2041d32e60c55bdaf39bd9abf08493b3
