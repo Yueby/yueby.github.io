@@ -1,66 +1,628 @@
-body {
-    margin: 0;
-    background-color: rgb(43, 43, 43);
+/* ============================================
+   Yueby - 极简精致深色主题
+   设计理念：东方禅意 + 金线装饰 + 流动动画
+   ============================================ */
+
+/* CSS 变量 */
+:root {
+    /* 颜色系统 */
+    --color-bg-primary: #0a0a0f;
+    --color-bg-secondary: #141420;
+    --color-bg-tertiary: #1a1a28;
     
-    overflow: hidden;
+    --color-gold: #c9a96e;
+    --color-gold-light: #e8d5b0;
+    --color-gold-dark: #8b7355;
+    
+    --color-text-primary: #e8e8ed;
+    --color-text-secondary: #9a9aa8;
+    --color-text-muted: #5a5a68;
+    
+    --color-border: rgba(201, 169, 110, 0.15);
+    --color-border-hover: rgba(201, 169, 110, 0.4);
+    
+    /* 字体 */
+    --font-display: 'Cormorant Garamond', 'Noto Serif SC', serif;
+    --font-body: 'Noto Serif SC', serif;
+    
+    /* 间距 */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+    
+    /* 动画 */
+    --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-normal: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    
+    /* 圆角 */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 16px;
 }
 
-#avatar-link {
-
-    display: block;
-    border: 0;
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
-    background-image: url(../img/0.png);
-    background-size: cover;
+/* 重置和基础样式 */
+*, *::before, *::after {
+    margin: 0;
     padding: 0;
-    border: 2px solid hsla(0, 0%, 100%, .4);
-    margin: 0 auto;
-
+    box-sizing: border-box;
 }
 
-#avatar-link::after {
-    display: inline-block;
-    content: "QAQ";
-    color: white;
-    font-size: 15px;
-    border-radius: 50%;
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-primary);
+    line-height: 1.6;
+    overflow-x: hidden;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* 背景装饰 - 细微的网格纹理 */
+.bg-pattern {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
+    pointer-events: none;
+    opacity: 0.03;
+    background-image: 
+        linear-gradient(rgba(201, 169, 110, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(201, 169, 110, 0.1) 1px, transparent 1px);
+    background-size: 50px 50px;
+    animation: pattern-drift 60s linear infinite;
+}
+
+@keyframes pattern-drift {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(50px, 50px); }
+}
+
+/* 主容器 */
+.main-container {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-lg);
+}
+
+/* ============================================
+   头像区域
+   ============================================ */
+.avatar-section {
     text-align: center;
-    line-height: 100px;
-    background-color: rgba(0, 0, 0, 0.6);
-    opacity: 0;
-    transition: opacity 0.1s;
+    margin-bottom: var(--spacing-xl);
+    animation: fade-in-up 1s ease-out;
 }
 
-#avatar-link:hover::after {
-    opacity: 1;
+@keyframes fade-in-up {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-#avatar-container {
+/* 头像包装器 */
+.avatar-wrapper {
+    position: relative;
+    width: 140px;
+    height: 140px;
+    margin: 0 auto var(--spacing-lg);
+    cursor: pointer;
+}
+
+/* 头像光晕 */
+.avatar-glow {
     position: absolute;
     top: 50%;
     left: 50%;
+    width: 200px;
+    height: 200px;
     transform: translate(-50%, -50%);
+    background: radial-gradient(circle, rgba(201, 169, 110, 0.15) 0%, transparent 70%);
+    border-radius: 50%;
+    animation: glow-pulse 4s ease-in-out infinite;
 }
 
-#class-temp {
-    color: white;
+@keyframes glow-pulse {
+    0%, 100% { 
+        opacity: 0.6;
+        transform: translate(-50%, -50%) scale(1);
+    }
+    50% { 
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1.1);
+    }
+}
+
+/* 头像旋转光环 */
+.avatar-ring {
     position: absolute;
-    width: 100px;
-    height: 30px;
-    background-color: rgba(255, 255, 255, 0.4);
-    text-align: center;
-    right: -4%;
-    line-height: 30px;
-    border-radius: 10px;
-    opacity: 0;
-    transition: all 0.2s;
+    top: 50%;
+    left: 50%;
+    width: 160px;
+    height: 160px;
+    transform: translate(-50%, -50%);
+    border: 1px solid var(--color-gold);
+    border-radius: 50%;
+    opacity: 0.3;
+    animation: ring-rotate 20s linear infinite;
 }
 
-#class-temp:hover {
+@keyframes ring-rotate {
+    from { transform: translate(-50%, -50%) rotate(0deg); }
+    to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* 头像链接 */
+.avatar {
+    position: relative;
+    display: block;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid var(--color-border);
+    transition: all var(--transition-normal);
+    background: var(--color-bg-secondary);
+    z-index: 1;
+}
+
+.avatar:hover {
+    border-color: var(--color-gold);
+    transform: scale(1.05);
+    box-shadow: 
+        0 0 0 4px rgba(201, 169, 110, 0.1),
+        0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.avatar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-slow);
+}
+
+.avatar:hover .avatar-img {
+    transform: scale(1.1);
+}
+
+/* 名称和标语 */
+.name {
+    font-family: var(--font-display);
+    font-size: 3rem;
+    font-weight: 300;
+    letter-spacing: 0.3em;
+    margin-bottom: var(--spacing-xs);
+    color: var(--color-gold-light);
+    text-transform: uppercase;
+    animation: fade-in-up 1s ease-out 0.2s both;
+}
+
+.tagline {
+    font-size: 0.875rem;
+    font-weight: 300;
+    letter-spacing: 0.2em;
+    color: var(--color-text-secondary);
+    animation: fade-in-up 1s ease-out 0.4s both;
+}
+
+/* ============================================
+   社交链接
+   ============================================ */
+.social-links {
+    display: flex;
+    gap: var(--spacing-md);
+    animation: fade-in-up 1s ease-out 0.6s both;
+}
+
+.social-link {
+    position: relative;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: 1px solid var(--color-border);
+    border-radius: 50%;
+    color: var(--color-text-secondary);
+    cursor: pointer;
+    transition: all var(--transition-normal);
+    text-decoration: none;
+    overflow: hidden;
+}
+
+.social-link::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: radial-gradient(circle, rgba(201, 169, 110, 0.2) 0%, transparent 70%);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: all var(--transition-normal);
+}
+
+.social-link:hover {
+    border-color: var(--color-gold);
+    color: var(--color-gold);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.social-link:hover::before {
+    width: 100%;
+    height: 100%;
+}
+
+.social-link svg {
+    position: relative;
+    z-index: 1;
+    transition: transform var(--transition-fast);
+}
+
+.social-link:hover svg {
+    transform: scale(1.1);
+}
+
+/* VIP 按钮特殊状态 */
+.vip-toggle.active {
+    border-color: var(--color-gold);
+    color: var(--color-gold);
+    background: rgba(201, 169, 110, 0.1);
+}
+
+/* ============================================
+   VIP 面板
+   ============================================ */
+.vip-panel {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 360px;
+    max-width: 90vw;
+    height: 100vh;
+    background: var(--color-bg-secondary);
+    border-left: 1px solid var(--color-border);
+    transform: translateX(100%);
+    transition: transform var(--transition-slow);
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    box-shadow: -8px 0 32px rgba(0, 0, 0, 0.5);
+}
+
+.vip-panel.open {
+    transform: translateX(0);
+}
+
+.vip-panel-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--spacing-lg);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.vip-panel-title {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 400;
+    letter-spacing: 0.15em;
+    color: var(--color-gold-light);
+}
+
+.vip-panel-close {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: 1px solid var(--color-border);
+    border-radius: 50%;
+    color: var(--color-text-secondary);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.vip-panel-close:hover {
+    border-color: var(--color-gold);
+    color: var(--color-gold);
+    transform: rotate(90deg);
+}
+
+.vip-list {
+    flex: 1;
+    overflow-y: auto;
+    padding: var(--spacing-md);
+}
+
+.vip-list::-webkit-scrollbar {
+    width: 4px;
+}
+
+.vip-list::-webkit-scrollbar-track {
+    background: var(--color-bg-primary);
+}
+
+.vip-list::-webkit-scrollbar-thumb {
+    background: var(--color-gold-dark);
+    border-radius: 2px;
+}
+
+.vip-item {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    margin-bottom: var(--spacing-xs);
+    color: var(--color-text-secondary);
+    font-size: 0.875rem;
+    letter-spacing: 0.05em;
+    border-left: 2px solid transparent;
+    transition: all var(--transition-fast);
+}
+
+.vip-item:hover {
+    color: var(--color-text-primary);
+    border-left-color: var(--color-gold);
+    background: rgba(201, 169, 110, 0.05);
+}
+
+/* ============================================
+   隐藏入口
+   ============================================ */
+.secret-trigger {
+    position: fixed;
+    bottom: var(--spacing-lg);
+    right: var(--spacing-lg);
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: none;
+    color: var(--color-text-muted);
+    cursor: pointer;
+    opacity: 0.3;
+    transition: all var(--transition-normal);
+    animation: twinkle 3s ease-in-out infinite;
+}
+
+@keyframes twinkle {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 0.6; }
+}
+
+.secret-trigger:hover {
     opacity: 1;
-    right: 0%;
+    color: var(--color-gold);
+    transform: scale(1.2) rotate(180deg);
+}
+
+.secret-text {
+    font-size: 1.5rem;
+    display: block;
+}
+
+/* ============================================
+   密码模态框
+   ============================================ */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 200;
+    opacity: 0;
+    visibility: hidden;
+    transition: all var(--transition-normal);
+}
+
+.modal.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(10, 10, 15, 0.9);
+    backdrop-filter: blur(8px);
+}
+
+.modal-content {
+    position: relative;
+    width: 90%;
+    max-width: 400px;
+    padding: var(--spacing-xl);
+    background: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    transform: scale(0.9) translateY(20px);
+    transition: all var(--transition-normal);
+}
+
+.modal.open .modal-content {
+    transform: scale(1) translateY(0);
+}
+
+.modal-title {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+    color: var(--color-gold-light);
+}
+
+.modal-input {
+    width: 100%;
+    padding: var(--spacing-sm) var(--spacing-md);
+    background: var(--color-bg-primary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    color: var(--color-text-primary);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    letter-spacing: 0.1em;
+    outline: none;
+    transition: all var(--transition-fast);
+}
+
+.modal-input:focus {
+    border-color: var(--color-gold);
+    box-shadow: 0 0 0 3px rgba(201, 169, 110, 0.1);
+}
+
+.modal-input::placeholder {
+    color: var(--color-text-muted);
+}
+
+.modal-actions {
+    display: flex;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-lg);
+}
+
+.modal-btn {
+    flex: 1;
+    padding: var(--spacing-sm) var(--spacing-md);
+    background: transparent;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    color: var(--color-text-secondary);
+    font-family: var(--font-body);
+    font-size: 0.875rem;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.modal-btn:hover {
+    border-color: var(--color-gold);
+    color: var(--color-gold);
+}
+
+.modal-btn-confirm {
+    background: rgba(201, 169, 110, 0.1);
+    border-color: var(--color-gold);
+    color: var(--color-gold);
+}
+
+.modal-btn-confirm:hover {
+    background: rgba(201, 169, 110, 0.2);
+}
+
+/* ============================================
+   响应式设计
+   ============================================ */
+@media (max-width: 768px) {
+    :root {
+        font-size: 14px;
+    }
+    
+    .name {
+        font-size: 2.5rem;
+        letter-spacing: 0.2em;
+    }
+    
+    .tagline {
+        font-size: 0.75rem;
+    }
+    
+    .avatar-wrapper,
+    .avatar {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .avatar-ring {
+        width: 140px;
+        height: 140px;
+    }
+    
+    .avatar-glow {
+        width: 170px;
+        height: 170px;
+    }
+    
+    .social-link {
+        width: 44px;
+        height: 44px;
+    }
+}
+
+@media (max-width: 480px) {
+    .name {
+        font-size: 2rem;
+    }
+    
+    .social-links {
+        gap: var(--spacing-sm);
+    }
+    
+    .vip-panel {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+/* ============================================
+   动画增强
+   ============================================ */
+@media (prefers-reduced-motion: no-preference) {
+    /* 添加细微的悬停光效 */
+    .social-link:focus-visible {
+        outline: 2px solid var(--color-gold);
+        outline-offset: 4px;
+    }
+    
+    /* 输入框聚焦动画 */
+    .modal-input:focus {
+        animation: input-glow 2s ease-in-out infinite;
+    }
+    
+    @keyframes input-glow {
+        0%, 100% {
+            box-shadow: 0 0 0 3px rgba(201, 169, 110, 0.1);
+        }
+        50% {
+            box-shadow: 0 0 0 3px rgba(201, 169, 110, 0.2);
+        }
+    }
+}
+
+/* 减少动画模式 */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
 }
